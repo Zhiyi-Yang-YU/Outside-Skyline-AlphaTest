@@ -18,9 +18,9 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_gefxw")
 
 [node name="GameLevel" type="Node3D" parent="."]
-script = ExtResource("1_gefxw")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="GameLevel"]
 environment = SubResource("Environment_qpju7")
