@@ -48,7 +48,8 @@ const MEMORY_SENCE_HEIGHT: float 			= 100.0
 @onready var standCollissionShape: CollisionShape3D 	= $Stand_CollisionShape3D
 @onready var crouchCollissionShape: CollisionShape3D 	= $Crouch_CollisionShape3D
 
-
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:

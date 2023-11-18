@@ -4,28 +4,21 @@ extends Node3D
 var playerNode: Node3D
 var player: PackedScene 	= preload("res://OutsideSkyline_Alpha/Scene/Character/Player.tscn")
 
-var pauseUINode: Control
-var pauseUI: PackedScene 	= preload("res://OutsideSkyline_Alpha/Scene/UI/UI.tscn")
+# var pauseUINode: Control
+# var pauseUI: PackedScene 	= preload("res://OutsideSkyline_Alpha/Scene/UI/UI.tscn")
 
 const PLAYER_SPAWN_POSITION: Vector3 	= Vector3.ZERO
 
 
-
+# TODO: 不要让level干UI的活
 func _ready() -> void:
 	playerNode = spawnScene(player, self, PLAYER_SPAWN_POSITION)
-	pauseUINode = instantiateScene(pauseUI, self).get_node("GamePauseMenu")
-	pauseUINode.visible = false
-
-func _process(delta: float) -> void:
-	pauseGame()
-	
-
-func pauseGame() -> void:
-	if Input.is_action_just_pressed("ui_pause") and playerNode.is_on_floor():
-		pauseUINode.visible = not pauseUINode.visible
-		print("bob")
+	# pauseUINode = instantiateScene(pauseUI, self).get_node("Control_Game")
 
 
+
+
+# TODO: 这段脚本变成全局变量
 func instantiateScene(targetScene: PackedScene, parent: Node3D) -> Node3D:
 	var target: Node3D = targetScene.instantiate()
 	parent.add_child(target)

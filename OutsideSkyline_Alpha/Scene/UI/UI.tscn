@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm88x0u003miu"]
+[gd_scene load_steps=4 format=3 uid="uid://cm88x0u003miu"]
 
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI_Manager.gd" id="1_j5f5s"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="1_vm00g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
@@ -7,8 +8,9 @@ font = ExtResource("1_vm00g")
 font_size = 40
 
 [node name="UI" type="Node3D"]
+script = ExtResource("1_j5f5s")
 
-[node name="GamePauseMenu" type="Control" parent="."]
+[node name="Control_Game" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="GamePauseMenu"]
+[node name="BlackBackground" type="ColorRect" parent="Control_Game"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.376471)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GamePauseMenu"]
+[node name="GamePause" type="VBoxContainer" parent="Control_Game"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -39,16 +41,19 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="GamePauseMenu/VBoxContainer"]
+[node name="GamePauseLabel" type="Label" parent="Control_Game/GamePause"]
 layout_mode = 2
 text = "Game Paused"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="GamePauseMenu/VBoxContainer"]
+[node name="GamePauseButton" type="Button" parent="Control_Game/GamePause"]
 layout_mode = 2
 text = "Exit"
+
+[connection signal="button_up" from="Control_Game/GamePause/GamePauseButton" to="." method="_on_game_pause_button_button_up"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbwkr00ssdrah"]
+[gd_scene load_steps=7 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level.gd" id="1_gefxw"]
-[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Settings/SystemHQ.gd" id="3_4k6uv"]
+[ext_resource type="PackedScene" uid="uid://cm88x0u003miu" path="res://OutsideSkyline_Alpha/Scene/UI/UI.tscn" id="4_lc6ak"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -18,6 +18,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
+process_mode = 3
 script = ExtResource("1_gefxw")
 
 [node name="GameLevel" type="Node3D" parent="."]
@@ -31,9 +32,4 @@ shadow_enabled = true
 
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
 
-[node name="Settings" type="Node3D" parent="."]
-
-[node name="SystemHQ" type="Node" parent="Settings"]
-script = ExtResource("3_4k6uv")
-
-[node name="PauseGameSetup" type="Node" parent="Settings"]
+[node name="UI" parent="." instance=ExtResource("4_lc6ak")]
