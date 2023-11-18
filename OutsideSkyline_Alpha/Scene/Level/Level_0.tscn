@@ -115,6 +115,20 @@ mouse_filter = 2
 theme_override_constants/separation = 20
 alignment = 1
 
+[node name="OptionLabel" type="Label" parent="UI/Control_Game/GameOption"]
+layout_mode = 2
+text = "Nice try :)"
+label_settings = SubResource("LabelSettings_2r3r2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionLabel2" type="Label" parent="UI/Control_Game/GameOption"]
+layout_mode = 2
+text = "press \"esc\" to retrunw"
+label_settings = SubResource("LabelSettings_2r3r2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GamePauseButton" to="GameManager" method="_on_game_pause_button_button_up"]

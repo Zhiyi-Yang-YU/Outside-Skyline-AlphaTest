@@ -13,8 +13,14 @@ func _process(delta: float) -> void:
 
 func pauseGame() -> void:
 	if Input.is_action_just_pressed("ui_pause"):
-		gameUIManager.isPauseToggled = not gameUIManager.isPauseToggled
-		gameUIManager.togglePauseUI(gameUIManager.isPauseToggled)
+		if gameUIManager.isOptionToggled:
+			gameUIManager.togglePauseUI(true)
+			gameUIManager.isOptionToggled = not gameUIManager.isOptionToggled
+			gameUIManager.toggleOptionUI(gameUIManager.isOptionToggled)
+		else:
+			gameUIManager.isPauseToggled = not gameUIManager.isPauseToggled
+			gameUIManager.togglePauseUI(gameUIManager.isPauseToggled)
+		
 
 
 #signal process
@@ -25,9 +31,11 @@ func _on_game_continue_button_button_up() -> void:
 
 
 func _on_game_option_button_button_up() -> void:
-#	gameUIManager.toggleOptionUI(true)
-	print("option button pressed")
-
+#	print(gameUIManager.isOptionToggled)
+#	print("option button pressed")
+	gameUIManager.isOptionToggled = not gameUIManager.isOptionToggled
+	gameUIManager.toggleOptionUI(gameUIManager.isOptionToggled)
+	gameUIManager.gamePauseMenu.visible = false
 
 func _on_game_pause_button_button_up() -> void:
 	SystemHQ.quitGame()
