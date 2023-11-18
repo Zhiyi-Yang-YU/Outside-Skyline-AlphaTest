@@ -2,6 +2,14 @@
 - DATT3300 Outside Skyline Game Milestone 2
 - Deadline: 2023/12/04
 
+## TODO
+- 现实虚拟切换
+- NPC
+- 目标指引
+- 关卡事件流程
+- 对话系统
+
+
 ## Tutorial Used
 - [Juiced Up First Person Character Controller Tutorial - Godot 3D FPS](https://youtu.be/A3HLeyaBCq4?si=3KP-erZ-9pWVv2yH)
 - [Godot 4.X : Ultimate First Person Controller Tutorial ( 2023 )](https://youtu.be/xIKErMgJ1Yk?si=siLUjf5kRFujED6f)

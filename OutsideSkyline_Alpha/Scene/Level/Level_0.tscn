@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=10 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level.gd" id="1_gefxw"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameManager.gd" id="3_gjmi4"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="4_88amx"]
+[ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="5_17eon"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,6 +18,10 @@ background_mode = 2
 sky = SubResource("Sky_w8o80")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
+font = ExtResource("5_17eon")
+font_size = 40
 
 [node name="Node3D" type="Node3D"]
 process_mode = 3
@@ -30,3 +37,84 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
+
+[node name="GameManager" type="Node3D" parent="."]
+script = ExtResource("3_gjmi4")
+
+[node name="UI" type="Node3D" parent="."]
+script = ExtResource("4_88amx")
+
+[node name="Control_Game" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BlackBackground" type="ColorRect" parent="UI/Control_Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.509804)
+
+[node name="GamePause" type="VBoxContainer" parent="UI/Control_Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="GamePauseLabel" type="Label" parent="UI/Control_Game/GamePause"]
+layout_mode = 2
+text = "Game Paused"
+label_settings = SubResource("LabelSettings_2r3r2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameContinueButton" type="Button" parent="UI/Control_Game/GamePause"]
+layout_mode = 2
+text = "Continue"
+
+[node name="GameOptionButton" type="Button" parent="UI/Control_Game/GamePause"]
+layout_mode = 2
+text = "Option"
+
+[node name="GamePauseButton" type="Button" parent="UI/Control_Game/GamePause"]
+layout_mode = 2
+text = "Exit"
+
+[node name="GameOption" type="VBoxContainer" parent="UI/Control_Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[connection signal="button_up" from="UI/Control_Game/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
+[connection signal="button_up" from="UI/Control_Game/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
+[connection signal="button_up" from="UI/Control_Game/GamePause/GamePauseButton" to="GameManager" method="_on_game_pause_button_button_up"]
