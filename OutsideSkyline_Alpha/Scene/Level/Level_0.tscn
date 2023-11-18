@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=6 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level.gd" id="1_gefxw"]
-[ext_resource type="PackedScene" uid="uid://cm88x0u003miu" path="res://OutsideSkyline_Alpha/Scene/UI/UI.tscn" id="4_lc6ak"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -31,5 +30,3 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
-
-[node name="UI" parent="." instance=ExtResource("4_lc6ak")]

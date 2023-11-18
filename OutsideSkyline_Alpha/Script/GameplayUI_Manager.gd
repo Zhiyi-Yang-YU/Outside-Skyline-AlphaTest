@@ -13,7 +13,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	pauseGame()
-	quitGame()
 
 
 #method
@@ -21,14 +20,6 @@ func pauseGame() -> void:
 	if Input.is_action_just_pressed("ui_pause"):
 		isPauseToggled = not isPauseToggled
 		togglePauseUI(isPauseToggled)
-		print("pause game")
-
-
-
-func quitGame() -> void:
-	if Input.is_action_just_pressed("ui_exitGame"):
-		get_tree().quit()
-
 
 
 #helper
@@ -36,13 +27,21 @@ func togglePauseUI(toggle: bool) -> void:
 	if toggle:
 		blackBackground.visible = true
 		gamePause.visible = true
+		#TODO: 给我停下来啊！！！
+		# get_tree().paused = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		blackBackground.visible = false
 		gamePause.visible = false
+		#TODO: 给我停下来啊！！！
+		# get_tree().paused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 #signal process
+func _on_game_continue_button_button_up():
+	isPauseToggled = false
+	togglePauseUI(false)
+
 func _on_game_pause_button_button_up():
-	print("Exit buttom pressed")
+	SystemHQ.quitGame()
