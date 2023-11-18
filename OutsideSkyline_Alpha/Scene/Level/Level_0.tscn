@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbwkr00ssdrah"]
+
+[ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level.tscn" id="1_46ffi"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level.gd" id="1_gefxw"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/SystemHQ.gd" id="4_62its"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_w8o80"]
+sky_material = SubResource("ProceduralSkyMaterial_jnkxl")
+
+[sub_resource type="Environment" id="Environment_qpju7"]
+background_mode = 2
+sky = SubResource("Sky_w8o80")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Level_0" type="Node3D"]
+script = ExtResource("1_gefxw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qpju7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Level" parent="." instance=ExtResource("1_46ffi")]
+
+[node name="Settings" type="Node3D" parent="."]
+
+[node name="SystemHQ" type="Node" parent="Settings"]
+script = ExtResource("4_62its")
