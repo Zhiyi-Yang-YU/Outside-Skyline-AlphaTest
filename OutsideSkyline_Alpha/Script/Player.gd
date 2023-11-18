@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name Player
+class_name PlayerCharacter
 
 #物理
 var currentSpeed: float
@@ -77,7 +77,7 @@ func _physics_process(delta: float) -> void:
 	sprintFOV(delta)
 
 	#在[现实]和[回忆]切换
-	# switchRealityANDMemory()
+	switchRealityANDMemory()
 
 	move_and_slide()
 
@@ -158,14 +158,13 @@ func sprintFOV(dt: float) -> void:
 		)
 
 
-# func switchRealityANDMemory() -> void:
-# 	if Input.is_action_just_pressed("ui_switchRealityANDMemory") and is_on_floor():
-# 		if isInReality:
-# 			isInReality = false
-# 			player.position.y = MEMORY_SENCE_HEIGHT
-# 		else:
-# 			isInReality = true
-# 			player.position.y = REALITY_SENCE_HEIGHT
+func switchRealityANDMemory() -> void:
+	if Input.is_action_just_pressed("ui_switchRealityANDMemory") and is_on_floor():
+		if isInReality:
+			global_position.y = global_position.y + MEMORY_SENCE_HEIGHT
+		else:
+			global_position.y = global_position.y - MEMORY_SENCE_HEIGHT + REALITY_SENCE_HEIGHT
+		isInReality = not isInReality
 
 
 

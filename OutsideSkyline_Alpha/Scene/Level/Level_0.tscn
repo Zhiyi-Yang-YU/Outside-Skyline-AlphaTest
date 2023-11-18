@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=11 format=3 uid="uid://dvy26ns0uaolc"]
 
-[ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level.tscn" id="1_46ffi"]
+[ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Reality.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level.gd" id="1_gefxw"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameManager.gd" id="3_gjmi4"]
+[ext_resource type="PackedScene" uid="uid://5sguweeqt816" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Memory.tscn" id="3_n7no7"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="4_88amx"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="5_17eon"]
 
@@ -36,7 +37,10 @@ environment = SubResource("Environment_qpju7")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="MemoryLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
+[node name="RealityLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
+
+[node name="MemoryLevel" parent="GameLevel" instance=ExtResource("3_n7no7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("3_gjmi4")
