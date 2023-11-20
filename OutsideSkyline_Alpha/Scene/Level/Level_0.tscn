@@ -94,6 +94,10 @@ vertical_alignment = 1
 layout_mode = 2
 text = "Continue"
 
+[node name="GameHow2playButton" type="Button" parent="UI/Control_Game/GamePause"]
+layout_mode = 2
+text = "How to play ?"
+
 [node name="GameOptionButton" type="Button" parent="UI/Control_Game/GamePause"]
 layout_mode = 2
 text = "Option"
@@ -101,6 +105,37 @@ text = "Option"
 [node name="GamePauseButton" type="Button" parent="UI/Control_Game/GamePause"]
 layout_mode = 2
 text = "Exit"
+
+[node name="GameHow2play" type="VBoxContainer" parent="UI/Control_Game"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -66.0
+offset_right = 252.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="How2playLabel" type="Label" parent="UI/Control_Game/GameHow2play"]
+layout_mode = 2
+text = "How to play NOT DONE"
+label_settings = SubResource("LabelSettings_2r3r2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="How2playLabel2" type="Label" parent="UI/Control_Game/GameHow2play"]
+layout_mode = 2
+text = "press \"esc\" to retrun"
+label_settings = SubResource("LabelSettings_2r3r2")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GameOption" type="VBoxContainer" parent="UI/Control_Game"]
 layout_mode = 1
@@ -121,18 +156,19 @@ alignment = 1
 
 [node name="OptionLabel" type="Label" parent="UI/Control_Game/GameOption"]
 layout_mode = 2
-text = "Nice try :)"
+text = "Game Option NOT DONE"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="OptionLabel2" type="Label" parent="UI/Control_Game/GameOption"]
 layout_mode = 2
-text = "press \"esc\" to retrunw"
+text = "press \"esc\" to retrun"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
+[connection signal="button_up" from="UI/Control_Game/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GamePauseButton" to="GameManager" method="_on_game_pause_button_button_up"]
