@@ -95,6 +95,7 @@ layout_mode = 2
 text = "Continue"
 
 [node name="GameHow2playButton" type="Button" parent="UI/Control_Game/GamePause"]
+visible = false
 layout_mode = 2
 text = "How to play ?"
 
@@ -107,6 +108,7 @@ layout_mode = 2
 text = "Exit"
 
 [node name="GameHow2play" type="VBoxContainer" parent="UI/Control_Game"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -138,6 +140,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameOption" type="VBoxContainer" parent="UI/Control_Game"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

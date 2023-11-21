@@ -9,6 +9,7 @@
 [node name="VisualNode" type="Node3D" parent="."]
 
 [node name="Floor" type="CSGBox3D" parent="VisualNode"]
+process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.503913, 0)
 material_override = ExtResource("1_g5wrp")
 use_collision = true

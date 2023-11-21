@@ -1,5 +1,5 @@
-class_name GameplayUI_Manager
 extends Node3D
+class_name GameplayUI_Manager
 
 @onready var blackBackground: ColorRect = $Control_Game/BlackBackground
 @onready var gamePauseMenu: BoxContainer = $Control_Game/GamePause
@@ -19,18 +19,14 @@ func _ready() -> void:
 
 #helpers
 func togglePauseUI(toggle: bool) -> void:
-	##不起效
+	blackBackground.visible = toggle
+	gamePauseMenu.visible = toggle
+	# TODO: 给我停下来啊！！！
+	get_tree().paused = toggle
+
 	if toggle:
-		blackBackground.visible = true
-		gamePauseMenu.visible = true
-		# TODO: 给我停下来啊！！！
-		get_tree().paused = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
-		blackBackground.visible = false
-		gamePauseMenu.visible = false
-		# TODO: 给我停下来啊！！！
-		get_tree().paused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
