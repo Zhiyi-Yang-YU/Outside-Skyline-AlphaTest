@@ -3,50 +3,49 @@ class_name PlayerCharacter
 
 #物理
 var currentSpeed: float
-var isCrouching: bool 						= false
-const WALK_SPEED: float 					= 5.0
-const CROUCH_SPEED: float 					= 3.0
-const SPRINT_SPEED: float 					= 8.0
+var isCrouching: bool = false
+const WALK_SPEED: float = 5.0
+const CROUCH_SPEED: float = 3.0
+const SPRINT_SPEED: float = 8.0
 
-const GRAVITATIONAL_ACCELERATION: float 	= 9.80665
-const REGULAR_JUMP_VELOCITY: float 			= 4.5
+const GRAVITATIONAL_ACCELERATION: float = 9.80665
+const REGULAR_JUMP_VELOCITY: float = 4.5
 
-const CROUCHING_DEPTH_LOCAL: float 			= -0.7
+const CROUCHING_DEPTH_LOCAL: float = -0.7
 
 #摄像机
-const CAMERA_ROTATE_SENSITIVITY: float 		= 0.003
-const CAMERA_ROTATE_X_LIMIT_MIN: float 		= -45.0
-const CAMERA_ROTATE_X_LIMIT_MAX: float 		= 60.0
+const CAMERA_ROTATE_SENSITIVITY: float = 0.003
+const CAMERA_ROTATE_X_LIMIT_MIN: float = -45.0
+const CAMERA_ROTATE_X_LIMIT_MAX: float = 60.0
 
 #FOV
-const FOV_BASE: float 						= 80.0
-const FOV_TARGET_SCLAE: float 				= 1.3
-const FOV_VELOCITY_CLAMP_LIMIT_MIN: float 	= 0.5
-const FOV_VELOCITY_CLAMP_LIMIT_MAX: float 	= SPRINT_SPEED * 2
+const FOV_BASE: float = 80.0
+const FOV_TARGET_SCLAE: float = 1.3
+const FOV_VELOCITY_CLAMP_LIMIT_MIN: float = 0.5
+const FOV_VELOCITY_CLAMP_LIMIT_MAX: float = SPRINT_SPEED * 2
 
 #走路视角上下晃动常量与变量
-var headBobTime: float 						= 0.0
-var currentCrouchingDepth: float 			= 0.0
-const HEAD_HEIGHT: float 					= 1.8
-const HEAD_BOB_FREQUENCY: float 			= 2.0
-const HEAD_BOB_AMPLITUDE: float 			= 0.05
+var headBobTime: float = 0.0
+var currentCrouchingDepth: float = 0.0
+const HEAD_HEIGHT: float = 1.8
+const HEAD_BOB_FREQUENCY: float = 2.0
+const HEAD_BOB_AMPLITUDE: float = 0.05
 
 #lerp scale
-const AIR_STOP_LERP_DELTA_SCALE: float 		= 3.0
-const FLOOR_STOP_LERP_DELTA_SCALE: float 	= 7.0
-const FOV_LERP_DELTA_SCALE: float 			= 8.0
-const CROUCH_LERP_DELTA_SCALE: float 		= 10.0
+const AIR_STOP_LERP_DELTA_SCALE: float = 3.0
+const FLOOR_STOP_LERP_DELTA_SCALE: float = 7.0
+const FOV_LERP_DELTA_SCALE: float = 8.0
+const CROUCH_LERP_DELTA_SCALE: float = 10.0
 
 var isInReality: bool = true
+const REALITY_SENCE_HEIGHT: float = 0.0
+const MEMORY_SENCE_HEIGHT: float = 100.0
 
-const REALITY_SENCE_HEIGHT: float 			= 0.0
-const MEMORY_SENCE_HEIGHT: float 			= 100.0
-
-@onready var player: Node3D 				= $VisualNode
-@onready var head: Node3D 					= $VisualNode/Head
-@onready var camera: Camera3D 				= $VisualNode/Head/Camera3D
-@onready var standCollissionShape: CollisionShape3D 	= $Stand_CollisionShape3D
-@onready var crouchCollissionShape: CollisionShape3D 	= $Crouch_CollisionShape3D
+@onready var player: Node3D = $VisualNode
+@onready var head: Node3D = $VisualNode/Head
+@onready var camera: Camera3D = $VisualNode/Head/Camera3D
+@onready var standCollissionShape: CollisionShape3D = $Stand_CollisionShape3D
+@onready var crouchCollissionShape: CollisionShape3D = $Crouch_CollisionShape3D
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -60,8 +59,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			deg_to_rad(CAMERA_ROTATE_X_LIMIT_MIN),
 			deg_to_rad(CAMERA_ROTATE_X_LIMIT_MAX)
 		)
-
-
 
 func _physics_process(delta: float) -> void:
 	#跳跃
@@ -164,6 +161,7 @@ func switchRealityANDMemory() -> void:
 			global_position.y = global_position.y + MEMORY_SENCE_HEIGHT
 		else:
 			global_position.y = global_position.y - MEMORY_SENCE_HEIGHT + REALITY_SENCE_HEIGHT
+
 		isInReality = not isInReality
 
 

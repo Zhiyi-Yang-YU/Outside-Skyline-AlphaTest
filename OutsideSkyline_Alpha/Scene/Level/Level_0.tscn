@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level.gd" id="1_gefxw"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameManager.gd" id="3_gjmi4"]
 [ext_resource type="PackedScene" uid="uid://5sguweeqt816" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Memory.tscn" id="3_n7no7"]
-[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="4_88amx"]
-[ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="5_17eon"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="5_p43ex"]
+[ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="6_d8lwe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,7 +21,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
-font = ExtResource("5_17eon")
+font = ExtResource("6_d8lwe")
 font_size = 40
 
 [node name="Node3D" type="Node3D"]
@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 script = ExtResource("3_gjmi4")
 
 [node name="UI" type="Node3D" parent="."]
-script = ExtResource("4_88amx")
+script = ExtResource("5_p43ex")
 
 [node name="Control_Game" type="Control" parent="UI"]
 layout_mode = 3
@@ -103,7 +103,7 @@ text = "How to play ?"
 layout_mode = 2
 text = "Option"
 
-[node name="GamePauseButton" type="Button" parent="UI/Control_Game/GamePause"]
+[node name="GameExitButton" type="Button" parent="UI/Control_Game/GamePause"]
 layout_mode = 2
 text = "Exit"
 
@@ -174,4 +174,4 @@ vertical_alignment = 1
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
-[connection signal="button_up" from="UI/Control_Game/GamePause/GamePauseButton" to="GameManager" method="_on_game_pause_button_button_up"]
+[connection signal="button_up" from="UI/Control_Game/GamePause/GameExitButton" to="GameManager" method="_on_game_exit_button_button_up"]

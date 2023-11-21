@@ -61,5 +61,5 @@ func _on_game_option_button_button_up() -> void:
 	gameUIManager.gamePauseMenu.visible = false
 
 
-func _on_game_pause_button_button_up() -> void:
+func _on_game_exit_button_button_up() -> void:
 	SystemHQ.quitGame()
