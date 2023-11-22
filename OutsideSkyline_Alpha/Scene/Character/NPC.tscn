@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhjfs8vqf235f"]
+[gd_scene load_steps=7 format=3 uid="uid://dhjfs8vqf235f"]
 
-[ext_resource type="Material" uid="uid://drik12fpjav2" path="res://OutsideSkyline_Alpha/Material/Texture_BLUE.tres" id="1_o6vlx"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/NPC.gd" id="1_5lqhq"]
+[ext_resource type="Material" uid="uid://b7w55ikkyv3a2" path="res://OutsideSkyline_Alpha/Material/DemoTexture_OrangeTilemap.tres" id="2_i5tko"]
+[ext_resource type="FontFile" uid="uid://sklftt7ai8dk" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Regular.ttf" id="3_hjnxl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
 
@@ -9,8 +11,9 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_wcjrv"]
 radius = 3.0
 
-[node name="Mr_Blue" type="Node3D" groups=["PlayerGroup"]]
+[node name="NPC" type="Node3D" groups=["PlayerGroup"]]
 process_mode = 1
+script = ExtResource("1_5lqhq")
 
 [node name="VisualNode" type="Node3D" parent="."]
 
@@ -18,9 +21,15 @@ process_mode = 1
 
 [node name="BodyMesh" type="MeshInstance3D" parent="VisualNode/Body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-material_override = ExtResource("1_o6vlx")
+material_override = ExtResource("2_i5tko")
 mesh = SubResource("CapsuleMesh_daxel")
 skeleton = NodePath("../..")
+
+[node name="NPCNameLabel" type="Label3D" parent="VisualNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+text = "NPC Name"
+font = ExtResource("3_hjnxl")
+font_size = 50
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 
@@ -32,3 +41,5 @@ shape = SubResource("CapsuleShape3D_42di8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
 shape = SubResource("SphereShape3D_wcjrv")
+
+[node name="InteractComponent" type="Node3D" parent="."]

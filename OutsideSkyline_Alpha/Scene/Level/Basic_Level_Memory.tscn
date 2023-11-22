@@ -1,43 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://5sguweeqt816"]
+[gd_scene load_steps=3 format=3 uid="uid://5sguweeqt816"]
 
 [ext_resource type="Material" uid="uid://ctvb3o1t8t1o5" path="res://OutsideSkyline_Alpha/Material/DemoTexture_GreyTilemap.tres" id="1_g5wrp"]
 [ext_resource type="Material" uid="uid://d0wtslghyf6f0" path="res://OutsideSkyline_Alpha/Material/Texture_GREEN.tres" id="2_6ylmt"]
-[ext_resource type="Material" uid="uid://b7w55ikkyv3a2" path="res://OutsideSkyline_Alpha/Material/DemoTexture_OrangeTilemap.tres" id="2_t6k0u"]
 
 [node name="Level" type="Node3D"]
 
 [node name="VisualNode" type="Node3D" parent="."]
-
-[node name="Floor" type="CSGBox3D" parent="VisualNode"]
-process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.503913, 0)
-material_override = ExtResource("1_g5wrp")
-use_collision = true
-size = Vector3(50, 1, 50)
-
-[node name="Wall_+X" type="CSGBox3D" parent="VisualNode"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0.8, 0)
-material_override = ExtResource("2_t6k0u")
-use_collision = true
-size = Vector3(1, 3.8, 50)
-
-[node name="Wall_-X" type="CSGBox3D" parent="VisualNode"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5, 0.8, 0)
-material_override = ExtResource("2_t6k0u")
-use_collision = true
-size = Vector3(1, 3.8, 50)
-
-[node name="Wall_+Z" type="CSGBox3D" parent="VisualNode"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 25.5)
-material_override = ExtResource("2_t6k0u")
-use_collision = true
-size = Vector3(50, 3.8, 1)
-
-[node name="Wall_-Z" type="CSGBox3D" parent="VisualNode"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -25.5)
-material_override = ExtResource("2_t6k0u")
-use_collision = true
-size = Vector3(50, 3.8, 1)
 
 [node name="TestingBox2" type="CSGBox3D" parent="VisualNode"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -4.9616)
@@ -50,3 +18,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 3.86953)
 material_override = ExtResource("2_6ylmt")
 use_collision = true
 size = Vector3(7.8, 1.02299, 8.83508)
+
+[node name="Structure" type="Node3D" parent="VisualNode"]
+
+[node name="Floor" type="CSGBox3D" parent="VisualNode/Structure"]
+process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.503913, 0)
+material_override = ExtResource("1_g5wrp")
+use_collision = true
+size = Vector3(50, 1, 50)
+
+[node name="Wall_+X" type="CSGBox3D" parent="VisualNode/Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0.8, 0)
+material_override = ExtResource("2_6ylmt")
+use_collision = true
+size = Vector3(1, 3.8, 50)
+
+[node name="Wall_-X" type="CSGBox3D" parent="VisualNode/Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5, 0.8, 0)
+material_override = ExtResource("2_6ylmt")
+use_collision = true
+size = Vector3(1, 3.8, 50)
+
+[node name="Wall_+Z" type="CSGBox3D" parent="VisualNode/Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 25.5)
+material_override = ExtResource("2_6ylmt")
+use_collision = true
+size = Vector3(50, 3.8, 1)
+
+[node name="Wall_-Z" type="CSGBox3D" parent="VisualNode/Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -25.5)
+material_override = ExtResource("2_6ylmt")
+use_collision = true
+size = Vector3(50, 3.8, 1)

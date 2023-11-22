@@ -9,7 +9,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6sh5p"]
 height = 1.2
 
-[node name="Player" type="CharacterBody3D" groups=["PlayerGroup"]]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 process_mode = 1
 script = ExtResource("1_jkp05")
 
