@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhjfs8vqf235f"]
+
+[ext_resource type="Material" uid="uid://drik12fpjav2" path="res://OutsideSkyline_Alpha/Material/Texture_BLUE.tres" id="1_o6vlx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_42di8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wcjrv"]
+radius = 3.0
+
+[node name="Mr_Blue" type="Node3D" groups=["PlayerGroup"]]
+process_mode = 1
+
+[node name="VisualNode" type="Node3D" parent="."]
+
+[node name="Body" type="Node3D" parent="VisualNode"]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="VisualNode/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("1_o6vlx")
+mesh = SubResource("CapsuleMesh_daxel")
+skeleton = NodePath("../..")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="Stand_CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_42di8")
+
+[node name="CanInteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
+shape = SubResource("SphereShape3D_wcjrv")
