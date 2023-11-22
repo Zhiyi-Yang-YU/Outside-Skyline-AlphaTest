@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="5_p43ex"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="6_d8lwe"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
+font = ExtResource("6_d8lwe")
+font_size = 40
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,22 +25,11 @@ sky = SubResource("Sky_w8o80")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
-font = ExtResource("6_d8lwe")
-font_size = 40
-
 [node name="Node3D" type="Node3D"]
 process_mode = 3
 script = ExtResource("1_gefxw")
 
 [node name="GameLevel" type="Node3D" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="GameLevel"]
-environment = SubResource("Environment_qpju7")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameLevel"]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
 
 [node name="RealityLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
 
@@ -174,6 +167,13 @@ text = "press \"esc\" to retrun"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qpju7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
 
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_Game/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]

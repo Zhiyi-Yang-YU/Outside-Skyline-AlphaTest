@@ -1,6 +1,6 @@
 extends Node3D
 
-const PLAYER_SPAWN_POSITION: Vector3 	= Vector3(0, 0, 20)
+const PLAYER_SPAWN_POSITION: Vector3 = Vector3(0, 0, 20)
 
 @onready var player: CharacterBody3D = $Player
 
