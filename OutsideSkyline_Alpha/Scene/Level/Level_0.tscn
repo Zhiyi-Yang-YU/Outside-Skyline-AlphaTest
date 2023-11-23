@@ -12,11 +12,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
 font = ExtResource("6_d8lwe")
-font_size = 40
+font_size = 72
 
 [sub_resource type="LabelSettings" id="LabelSettings_d2lrq"]
 font = ExtResource("7_rodwu")
-font_size = 24
+font_size = 60
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -45,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 [node name="Player" parent="." instance=ExtResource("5_gsoxp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 
-[node name="UI" type="Node3D" parent="."]
+[node name="UI" type="Node3D" parent="." groups=["UI"]]
 script = ExtResource("5_p43ex")
 
 [node name="Control_Game" type="Control" parent="UI"]
@@ -140,7 +140,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameOption" type="VBoxContainer" parent="UI/Control_Game"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -180,7 +179,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control_GamePlayUI"]
+[node name="InteractTargetInfo" type="HBoxContainer" parent="UI/Control_GamePlayUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -195,7 +194,7 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="UI/Control_GamePlayUI/HBoxContainer"]
+[node name="InteractTargetInfoLabel" type="Label" parent="UI/Control_GamePlayUI/InteractTargetInfo"]
 layout_mode = 2
 text = "talk to XXX"
 label_settings = SubResource("LabelSettings_d2lrq")

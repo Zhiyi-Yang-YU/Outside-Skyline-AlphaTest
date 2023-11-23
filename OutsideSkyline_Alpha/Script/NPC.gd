@@ -4,7 +4,8 @@ extends Node3D
 var canInteractNow: bool = false
 
 @export var npcName: String = "default NPC Name"
-@export var npcInteractInfo: Label
+var ui: Node3D
+var ui_npcInteractInfo: Label
 var canInteractLabel: String = "Press 'E' to interact with XXX"
 var canNOTInteractLabel: String = "cannot talk to XXX"
 
@@ -17,6 +18,7 @@ var playerCameraPosition: Vector3
 
 func _ready() -> void:
 	_findPlayer()
+	_findUI()
 
 
 func _process(delta: float) -> void:
@@ -33,7 +35,20 @@ func _findPlayer() -> void:
 		player = playersArray[0] as CharacterBody3D
 		playerCamera = player.get_node("VisualNode/Head/Camera3D") as Camera3D
 	else:
-		print("NPC.gd Error1: Player NOT found")
+#		print("NPC.gd ERROR1: Player NOT found")
+		SystemHQ.quitGame()
+
+
+func _findUI() -> void:
+	var UIArray = get_tree().get_nodes_in_group("UI")
+	if UIArray.size() > 0:
+		ui = UIArray[0] as Node3D
+		ui_npcInteractInfo = ui.get_node(
+			"Control_GamePlayUI/InteractTargetInfo/InteractTargetInfoLabel"
+			) as Label
+		print("NPC.gd: UI found")
+	else:
+#		print("NPC.gd ERROR2: UI NOT found")
 		SystemHQ.quitGame()
 
 
@@ -49,11 +64,21 @@ func _setUpLabel_and_InteractUI() -> void:
 	canNOTInteractLabel = "cannot talk to " + npcName
 
 
-func _on_can_interact_area_body_entered(playerNode: CharacterBody3D) -> void:
-	if playerNode.is_in_group("Player"):
-		print("NPC.gd MESSAGE: Player entered canInteractArea")
+func _on_can_interact_area_body_entered(playerNode: Node3D) -> void:
+	if not playerNode.is_in_group("Player"):
+		ui_npcInteractInfo.visible = false
+		canInteractNow = false
+	else:
+		ui_npcInteractInfo.visible = true
+		ui_npcInteractInfo.text = canInteractLabel
+		canInteractNow = true
 
 
-func _on_can_interact_area_body_exited(playerNode: CharacterBody3D) -> void:
-	if playerNode.is_in_group("Player"):
-		print("NPC.gd MESSAGE: Player exited canInteractArea")
+func _on_can_interact_area_body_exited(playerNode: Node3D) -> void:
+	if not playerNode.is_in_group("Player"):
+		ui_npcInteractInfo.visible = false
+		canInteractNow = false
+	else:
+		ui_npcInteractInfo.visible = false
+		ui_npcInteractInfo.text = canNOTInteractLabel
+		canInteractNow = false
