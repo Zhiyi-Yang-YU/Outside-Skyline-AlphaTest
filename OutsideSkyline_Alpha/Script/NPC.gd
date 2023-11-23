@@ -1,5 +1,8 @@
 extends Node3D
 
+@export var isInteractable: bool = true
+var canInteractNow: bool = false
+
 @export var npcName: String = "default NPC Name"
 var canInteractLabel: String = "Press 'E' to interact with XXX"
 var canNOTInteractLabel: String = "cannot talk to XXX"
@@ -13,7 +16,7 @@ var playerCameraPosition: Vector3
 
 func _ready() -> void:
 	_findPlayer()
-	
+
 
 func _process(delta: float) -> void:
 	_setUpLabel_and_InteractUI()
@@ -24,8 +27,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _findPlayer() -> void:
-	var playersArray = get_tree().get_nodes_in_group("Player") # 查找添加到 "Player" 组的所有节点
-	if playersArray.size() > 0: # 确保至少有一个玩家节点被找到
+	var playersArray = get_tree().get_nodes_in_group("Player")  # 查找添加到 "Player" 组的所有节点
+	if playersArray.size() > 0:  # 确保至少有一个玩家节点被找到
 		player = playersArray[0] as CharacterBody3D
 		playerCamera = player.get_node("VisualNode/Head/Camera3D") as Camera3D
 	else:
@@ -43,3 +46,13 @@ func _setUpLabel_and_InteractUI() -> void:
 	npcLabel.text = npcName
 	canInteractLabel = "Press 'E' to interact with " + npcName
 	canNOTInteractLabel = "cannot talk to " + npcName
+
+
+func _on_can_interact_area_body_entered(playerNode: CharacterBody3D) -> void:
+	if playerNode.is_in_group("Player"):
+		print("NPC.gd MESSAGE: Player entered canInteractArea")
+
+
+func _on_can_interact_area_body_exited(playerNode: CharacterBody3D) -> void:
+	if playerNode.is_in_group("Player"):
+		print("NPC.gd MESSAGE: Player exited canInteractArea")

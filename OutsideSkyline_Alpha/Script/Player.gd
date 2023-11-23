@@ -38,8 +38,6 @@ const FOV_LERP_DELTA_SCALE: float = 8.0
 const CROUCH_LERP_DELTA_SCALE: float = 10.0
 
 var isInReality: bool = true
-const REALITY_SENCE_HEIGHT: float = 0.0
-const MEMORY_SENCE_HEIGHT: float = 100.0
 
 @onready var player: Node3D = $VisualNode
 @onready var head: Node3D = $VisualNode/Head
@@ -47,8 +45,10 @@ const MEMORY_SENCE_HEIGHT: float = 100.0
 @onready var standCollissionShape: CollisionShape3D = $Stand_CollisionShape3D
 @onready var crouchCollissionShape: CollisionShape3D = $Crouch_CollisionShape3D
 
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -59,6 +59,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			deg_to_rad(CAMERA_ROTATE_X_LIMIT_MIN),
 			deg_to_rad(CAMERA_ROTATE_X_LIMIT_MAX)
 		)
+
 
 func _physics_process(delta: float) -> void:
 	#跳跃
@@ -145,24 +146,19 @@ func sprintFOV(dt: float) -> void:
 		FOV_VELOCITY_CLAMP_LIMIT_MIN,
 		FOV_VELOCITY_CLAMP_LIMIT_MAX
 	)
-	
+
 	var fovTarget = FOV_BASE + FOV_TARGET_SCLAE * fovVelocityClamped
-	
-	camera.fov = lerp(
-		camera.fov, 
-		fovTarget, 
-		FOV_LERP_DELTA_SCALE * dt
-		)
+
+	camera.fov = lerp(camera.fov, fovTarget, FOV_LERP_DELTA_SCALE * dt)
 
 
 func switchRealityANDMemory() -> void:
 	if Input.is_action_just_pressed("ui_switchRealityANDMemory") and is_on_floor():
 		if isInReality:
-			global_position.y = global_position.y + MEMORY_SENCE_HEIGHT
+			global_position.y = global_position.y + SystemHQ.MEMORY_SENCE_HEIGHT
 		else:
-			global_position.y = global_position.y - MEMORY_SENCE_HEIGHT + REALITY_SENCE_HEIGHT
+			global_position.y = (
+				global_position.y - SystemHQ.MEMORY_SENCE_HEIGHT + SystemHQ.REALITY_SENCE_HEIGHT
+			)
 
 		isInReality = not isInReality
-
-
-

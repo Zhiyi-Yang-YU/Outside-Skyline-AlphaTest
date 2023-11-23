@@ -42,4 +42,5 @@ shape = SubResource("CapsuleShape3D_42di8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
 shape = SubResource("SphereShape3D_wcjrv")
 
-[node name="InteractComponent" type="Node3D" parent="."]
+[connection signal="body_entered" from="CanInteractArea" to="." method="_on_can_interact_area_body_entered"]
+[connection signal="body_exited" from="CanInteractArea" to="." method="_on_can_interact_area_body_exited"]
