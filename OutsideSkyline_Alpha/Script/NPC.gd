@@ -4,6 +4,7 @@ extends Node3D
 var canInteractNow: bool = false
 
 @export var npcName: String = "default NPC Name"
+@export var npcInteractInfo: Label
 var canInteractLabel: String = "Press 'E' to interact with XXX"
 var canNOTInteractLabel: String = "cannot talk to XXX"
 

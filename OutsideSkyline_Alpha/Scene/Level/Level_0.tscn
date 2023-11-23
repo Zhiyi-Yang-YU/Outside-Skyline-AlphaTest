@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=15 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Reality.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level/Level.gd" id="1_gt1kv"]
@@ -7,11 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline_Alpha/Scene/Character/Player.tscn" id="5_gsoxp"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="5_p43ex"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="6_d8lwe"]
+[ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Medium.ttf" id="7_rodwu"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level/Level_0.gd" id="8_7m76s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
 font = ExtResource("6_d8lwe")
 font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2lrq"]
+font = ExtResource("7_rodwu")
+font_size = 24
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -165,6 +170,35 @@ text = "press \"esc\" to retrun"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Control_GamePlayUI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control_GamePlayUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 210.0
+offset_right = 112.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="UI/Control_GamePlayUI/HBoxContainer"]
+layout_mode = 2
+text = "talk to XXX"
+label_settings = SubResource("LabelSettings_d2lrq")
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("3_gjmi4")
