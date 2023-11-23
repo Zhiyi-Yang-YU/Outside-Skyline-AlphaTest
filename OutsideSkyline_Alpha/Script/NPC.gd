@@ -22,7 +22,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	_setUpLabel_and_InteractUI()
+	_npcLabelSetup()
 
 
 func _physics_process(delta: float) -> void:
@@ -58,7 +58,7 @@ func _LabelFace2Camera() -> void:
 	npcLabel.scale.x = -1
 
 
-func _setUpLabel_and_InteractUI() -> void:
+func _npcLabelSetup() -> void:
 	npcLabel.text = npcName
 	canInteractLabel = "Press 'E' to interact with " + npcName
 	canNOTInteractLabel = "cannot talk to " + npcName
