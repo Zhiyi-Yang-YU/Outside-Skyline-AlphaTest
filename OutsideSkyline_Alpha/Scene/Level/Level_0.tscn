@@ -16,7 +16,7 @@ font_size = 72
 
 [sub_resource type="LabelSettings" id="LabelSettings_d2lrq"]
 font = ExtResource("7_rodwu")
-font_size = 60
+font_size = 42
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -196,7 +196,7 @@ alignment = 1
 
 [node name="InteractTargetInfoLabel" type="Label" parent="UI/Control_GamePlayUI/InteractTargetInfo"]
 layout_mode = 2
-text = "talk to XXX"
+text = "Interact target Info Label"
 label_settings = SubResource("LabelSettings_d2lrq")
 
 [node name="GameManager" type="Node3D" parent="."]

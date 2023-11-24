@@ -21,9 +21,7 @@ func _ready() -> void:
 func togglePauseUI(toggle: bool) -> void:
 	blackBackground.visible = toggle
 	gamePauseMenu.visible = toggle
-	# TODO: 给我停下来啊！！！
 	get_tree().paused = toggle
-
 	if toggle:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:

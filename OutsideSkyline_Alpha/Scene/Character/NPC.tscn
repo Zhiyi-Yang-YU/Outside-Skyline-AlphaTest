@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dhjfs8vqf235f"]
 
-[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/NPC.gd" id="1_5lqhq"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Character/NPC.gd" id="1_fqd4y"]
 [ext_resource type="Material" uid="uid://b7w55ikkyv3a2" path="res://OutsideSkyline_Alpha/Material/DemoTexture_OrangeTilemap.tres" id="2_i5tko"]
 [ext_resource type="FontFile" uid="uid://sklftt7ai8dk" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Regular.ttf" id="3_hjnxl"]
 
@@ -13,7 +13,7 @@ radius = 3.0
 
 [node name="NPC" type="Node3D" groups=["PlayerGroup"]]
 process_mode = 1
-script = ExtResource("1_5lqhq")
+script = ExtResource("1_fqd4y")
 
 [node name="VisualNode" type="Node3D" parent="."]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0s8kdotmhivi"]
 
-[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Player.gd" id="1_jkp05"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Character/Player.gd" id="1_eh6w8"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
 
@@ -11,7 +11,7 @@ height = 1.2
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 process_mode = 1
-script = ExtResource("1_jkp05")
+script = ExtResource("1_eh6w8")
 
 [node name="VisualNode" type="Node3D" parent="."]
 

@@ -19,6 +19,8 @@ var playerCameraPosition: Vector3
 func _ready() -> void:
 	_findPlayer()
 	_findUI()
+	
+
 
 
 func _process(delta: float) -> void:
@@ -35,7 +37,6 @@ func _findPlayer() -> void:
 		player = playersArray[0] as CharacterBody3D
 		playerCamera = player.get_node("VisualNode/Head/Camera3D") as Camera3D
 	else:
-#		print("NPC.gd ERROR1: Player NOT found")
 		SystemHQ.quitGame()
 
 
@@ -46,39 +47,51 @@ func _findUI() -> void:
 		ui_npcInteractInfo = ui.get_node(
 			"Control_GamePlayUI/InteractTargetInfo/InteractTargetInfoLabel"
 			) as Label
-		print("NPC.gd: UI found")
+		ui_npcInteractInfo.visible = false
 	else:
-#		print("NPC.gd ERROR2: UI NOT found")
 		SystemHQ.quitGame()
 
 
 func _LabelFace2Camera() -> void:
-	playerCameraPosition = playerCamera.global_transform.origin
-	npcLabel.look_at(playerCameraPosition, Vector3.UP)
-	npcLabel.scale.x = -1
+	if not isInteractable:
+		pass
+	else:
+		playerCameraPosition = playerCamera.global_transform.origin
+		npcLabel.look_at(playerCameraPosition, Vector3.UP)
+		npcLabel.scale.x = -1
 
 
 func _npcLabelSetup() -> void:
-	npcLabel.text = npcName
-	canInteractLabel = "Press 'E' to interact with " + npcName
-	canNOTInteractLabel = "cannot talk to " + npcName
+	if not isInteractable:
+		npcLabel.text = ""
+		pass
+	else:
+		npcLabel.text = npcName
+		canInteractLabel = "Press 'E' to interact with " + npcName
+		canNOTInteractLabel = "cannot talk to " + npcName
 
 
 func _on_can_interact_area_body_entered(playerNode: Node3D) -> void:
-	if not playerNode.is_in_group("Player"):
-		ui_npcInteractInfo.visible = false
-		canInteractNow = false
+	if not isInteractable:
+		pass
 	else:
-		ui_npcInteractInfo.visible = true
-		ui_npcInteractInfo.text = canInteractLabel
-		canInteractNow = true
+		if not playerNode.is_in_group("Player"):
+			ui_npcInteractInfo.visible = false
+			canInteractNow = false
+		else:
+			ui_npcInteractInfo.visible = true
+			ui_npcInteractInfo.text = canInteractLabel
+			canInteractNow = true
 
 
 func _on_can_interact_area_body_exited(playerNode: Node3D) -> void:
-	if not playerNode.is_in_group("Player"):
-		ui_npcInteractInfo.visible = false
-		canInteractNow = false
+	if not isInteractable:
+		pass
 	else:
-		ui_npcInteractInfo.visible = false
-		ui_npcInteractInfo.text = canNOTInteractLabel
-		canInteractNow = false
+		if not playerNode.is_in_group("Player"):
+			ui_npcInteractInfo.visible = false
+			canInteractNow = false
+		else:
+			ui_npcInteractInfo.visible = false
+			ui_npcInteractInfo.text = canNOTInteractLabel
+			canInteractNow = false
