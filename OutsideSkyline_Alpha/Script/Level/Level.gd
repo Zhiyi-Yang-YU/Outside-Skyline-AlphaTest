@@ -28,8 +28,8 @@ func _process(delta: float) -> void:
 
 func levelSwitch_RealityANDMemory() -> void:
 	if player.isInReality:
-		realityScene.visible = true
-		memoryScene.visible = false
+		realityScene.show()
+		memoryScene.hide()
 	else:
-		realityScene.visible = false
-		memoryScene.visible = true
+		realityScene.hide()
+		memoryScene.show()

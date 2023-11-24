@@ -19,6 +19,7 @@
 - [How To Create A Pause Menu In Godot 4](https://youtu.be/3KFs04JH-uw?si=J0y_S-PHm57Cunm_)
 - [Welcome to Shaderland - An introduction to shaders in Godot](https://youtu.be/nyFzPaWAzeQ?si=z1szWa5EQ0SfSTvt)
 - [在 Godot 引擎中制作 AAA 图形非常简单！](https://www.bilibili.com/video/BV1Pw411P7x1/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
+- [【Godot教程】如何实现对话系统](https://www.bilibili.com/video/BV1y64y127n5/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 
 ## Resources Reference
 - [Greybox Texture](https://github.com/lukky-nl/FPS-controller-assets)

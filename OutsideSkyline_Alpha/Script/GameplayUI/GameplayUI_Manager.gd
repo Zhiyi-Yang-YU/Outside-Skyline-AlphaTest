@@ -1,10 +1,10 @@
 extends Node3D
 class_name GameplayUI_Manager
 
-@onready var blackBackground: ColorRect = $Control_Game/BlackBackground
-@onready var gamePauseMenu: BoxContainer = $Control_Game/GamePause
-@onready var gameOptionMenu: BoxContainer = $Control_Game/GameOption
-@onready var gameHow2playMenu: BoxContainer = $Control_Game/GameHow2play
+@onready var blackBackground: ColorRect = $Control_GameMenuUI/BlackBackground
+@onready var gamePauseMenu: BoxContainer = $Control_GameMenuUI/GamePause
+@onready var gameOptionMenu: BoxContainer = $Control_GameMenuUI/GameOption
+@onready var gameHow2playMenu: BoxContainer = $Control_GameMenuUI/GameHow2play
 
 var isPauseToggled: bool = false
 var isHow2PlayToggled: bool = false

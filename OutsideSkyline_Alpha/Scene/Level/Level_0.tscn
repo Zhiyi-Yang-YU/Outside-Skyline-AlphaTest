@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=16 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Reality.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level/Level.gd" id="1_gt1kv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="5_p43ex"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="6_d8lwe"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Medium.ttf" id="7_rodwu"]
+[ext_resource type="PackedScene" uid="uid://dcgkqubno5qmk" path="res://OutsideSkyline_Alpha/Scene/UI/dialog_box.tscn" id="8_002b4"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level/Level_0.gd" id="8_7m76s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
@@ -48,7 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 [node name="UI" type="Node3D" parent="." groups=["UI"]]
 script = ExtResource("5_p43ex")
 
-[node name="Control_Game" type="Control" parent="UI"]
+[node name="Control_GameMenuUI" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="BlackBackground" type="ColorRect" parent="UI/Control_Game"]
+[node name="BlackBackground" type="ColorRect" parent="UI/Control_GameMenuUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -66,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.509804)
 
-[node name="GamePause" type="VBoxContainer" parent="UI/Control_Game"]
+[node name="GamePause" type="VBoxContainer" parent="UI/Control_GameMenuUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -83,31 +84,31 @@ mouse_filter = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="GamePauseLabel" type="Label" parent="UI/Control_Game/GamePause"]
+[node name="GamePauseLabel" type="Label" parent="UI/Control_GameMenuUI/GamePause"]
 layout_mode = 2
 text = "Game Paused"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameContinueButton" type="Button" parent="UI/Control_Game/GamePause"]
+[node name="GameContinueButton" type="Button" parent="UI/Control_GameMenuUI/GamePause"]
 layout_mode = 2
 text = "Continue"
 
-[node name="GameHow2playButton" type="Button" parent="UI/Control_Game/GamePause"]
+[node name="GameHow2playButton" type="Button" parent="UI/Control_GameMenuUI/GamePause"]
 visible = false
 layout_mode = 2
 text = "How to play ?"
 
-[node name="GameOptionButton" type="Button" parent="UI/Control_Game/GamePause"]
+[node name="GameOptionButton" type="Button" parent="UI/Control_GameMenuUI/GamePause"]
 layout_mode = 2
 text = "Option"
 
-[node name="GameExitButton" type="Button" parent="UI/Control_Game/GamePause"]
+[node name="GameExitButton" type="Button" parent="UI/Control_GameMenuUI/GamePause"]
 layout_mode = 2
 text = "Exit"
 
-[node name="GameHow2play" type="VBoxContainer" parent="UI/Control_Game"]
+[node name="GameHow2play" type="VBoxContainer" parent="UI/Control_GameMenuUI"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -125,21 +126,21 @@ mouse_filter = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="How2playLabel" type="Label" parent="UI/Control_Game/GameHow2play"]
+[node name="How2playLabel" type="Label" parent="UI/Control_GameMenuUI/GameHow2play"]
 layout_mode = 2
 text = "How to play NOT DONE"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="How2playLabel2" type="Label" parent="UI/Control_Game/GameHow2play"]
+[node name="How2playLabel2" type="Label" parent="UI/Control_GameMenuUI/GameHow2play"]
 layout_mode = 2
 text = "press \"esc\" to retrun"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameOption" type="VBoxContainer" parent="UI/Control_Game"]
+[node name="GameOption" type="VBoxContainer" parent="UI/Control_GameMenuUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -156,14 +157,14 @@ mouse_filter = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="OptionLabel" type="Label" parent="UI/Control_Game/GameOption"]
+[node name="OptionLabel" type="Label" parent="UI/Control_GameMenuUI/GameOption"]
 layout_mode = 2
 text = "Game Option NOT DONE"
 label_settings = SubResource("LabelSettings_2r3r2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="OptionLabel2" type="Label" parent="UI/Control_Game/GameOption"]
+[node name="OptionLabel2" type="Label" parent="UI/Control_GameMenuUI/GameOption"]
 layout_mode = 2
 text = "press \"esc\" to retrun"
 label_settings = SubResource("LabelSettings_2r3r2")
@@ -199,6 +200,8 @@ layout_mode = 2
 text = "Interact target Info Label"
 label_settings = SubResource("LabelSettings_d2lrq")
 
+[node name="DialogBox" parent="UI" instance=ExtResource("8_002b4")]
+
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("3_gjmi4")
 
@@ -214,7 +217,7 @@ shadow_enabled = true
 [node name="Level0_Component" type="Node3D" parent="Setting"]
 script = ExtResource("8_7m76s")
 
-[connection signal="button_up" from="UI/Control_Game/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
-[connection signal="button_up" from="UI/Control_Game/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]
-[connection signal="button_up" from="UI/Control_Game/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
-[connection signal="button_up" from="UI/Control_Game/GamePause/GameExitButton" to="GameManager" method="_on_game_exit_button_button_up"]
+[connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
+[connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]
+[connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
+[connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameExitButton" to="GameManager" method="_on_game_exit_button_button_up"]

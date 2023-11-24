@@ -21,8 +21,6 @@ func _ready() -> void:
 	_findUI()
 	
 
-
-
 func _process(delta: float) -> void:
 	_npcLabelSetup()
 
