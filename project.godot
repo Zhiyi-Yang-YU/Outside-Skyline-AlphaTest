@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SystemHQ="*res://OutsideSkyline_Alpha/Script/Settings/SystemHQ.gd"
+DialogBox="*res://OutsideSkyline_Alpha/Scene/UI/dialog_box.tscn"
+DramaScript="*res://OutsideSkyline_Alpha/Script/Dialog/DramaScript.gd"
 
 [display]
 

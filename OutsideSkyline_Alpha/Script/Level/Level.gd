@@ -7,14 +7,8 @@ const PLAYER_SPAWN_POSITION: Vector3 = Vector3(0, 0, 20)
 @onready var realityScene: Node3D = $GameLevel/RealityLevel
 @onready var memoryScene: Node3D = $GameLevel/MemoryLevel
 
-# var playerNode: CharacterBody3D
-# var player: PackedScene = preload("res://OutsideSkyline_Alpha/Scene/Character/Player.tscn")
-
 
 func _ready() -> void:
-	# playerNode = SystemHQ.spawnScene(player, self, PLAYER_SPAWN_POSITION)
-	# playerNode.add_to_group("Player")  # 确保这行代码在实例化玩家后立即执行
-
 	realityScene.visible = true
 	memoryScene.visible = false
 
