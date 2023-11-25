@@ -1,5 +1,18 @@
 extends Node
 
+const TEST_MESSAGE: Array = [
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "This is a testing message"
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Testing message end"
+	},
+]
+
 const _0_001: Array = [
 	{
 		speaker = "Developer: ",
@@ -51,5 +64,18 @@ const _0_001: Array = [
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "talk to Mr.Blue, He has something want to show you"
+	},
+]
+
+const _0_002: Array = [
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "This is a dialog test"
+	},
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Welcome Here, My friend"
 	},
 ]

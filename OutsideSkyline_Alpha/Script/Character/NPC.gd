@@ -7,7 +7,7 @@ var canInteractNow: bool = false
 var ui: Node3D
 var ui_npcInteractInfo: Label
 var canInteractLabel: String = "Press 'E' to interact with XXX"
-var canNOTInteractLabel: String = "cannot talk to XXX"
+var canNOTInteractLabel: String = ""
 
 @onready var npcLabel: Label3D = $VisualNode/NPCNameLabel
 
@@ -19,9 +19,12 @@ var playerCameraPosition: Vector3
 func _ready() -> void:
 	_findPlayer()
 	_findUI()
-	
+
 
 func _process(delta: float) -> void:
+	if not isInteractable:
+		canInteractNow = false
+
 	_npcLabelSetup()
 
 
@@ -66,7 +69,6 @@ func _npcLabelSetup() -> void:
 	else:
 		npcLabel.text = npcName
 		canInteractLabel = "Press 'E' to interact with " + npcName
-		canNOTInteractLabel = "cannot talk to " + npcName
 
 
 func _on_can_interact_area_body_entered(playerNode: Node3D) -> void:

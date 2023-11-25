@@ -19,21 +19,7 @@ var curr: int = 0
 
 func _ready() -> void:
 	_hideDialogBox()
-	_showDialogBox([
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "Welcome to Alpha Test, This is developer speaking"},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "Just want to show you our reconstructed dialog system"},
-		{speaker = "Player: ", speakerCamp = FRIENDLY, text = "sure"},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "I reference the Call of Duty 19's dialog Art Style"},
-		{speaker = "Developer: ", speakerCamp = ENEMY, text = "When speaker is red, enemies are speaking"},
-		{speaker = "Developer: ", speakerCamp = ENEMY, text = "Don't attack me, this is only a demo"},
-		{speaker = "Developer: ", speakerCamp = FRIENDLY, text = "When speaker is blue, friendlys are speaking"},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "When speaker is yellow,the speaker belongs to neutral camps"},
-		{speaker = "Player: ", speakerCamp = FRIENDLY, text = "Nice"},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "Don't ask me why do we have this setting"},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "Just want to try, I don't even know how to use this system..."},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "...in a walking sims"},
-		{speaker = "Developer: ", speakerCamp = NEUTRAL, text = "talk to Mr.Blue, He has something want to show you"},
-	])
+
 
 	dialogTimer.start()
 

@@ -16,32 +16,23 @@ const ENEMY: String = COLOR_RED
 var dialogsArray: Array = []
 var curr: int = 0
 
+signal dialogueFinishedSignal
 
 func _ready() -> void:
-	pass
 	_hideDialogBox()
 	dialogTimer.start()
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
-		dialogTimer.stop()
-		if curr + 1 < dialogsArray.size():
-			_showDialog(curr + 1)
-		else:
-			_hideDialogBox()
-		get_viewport().set_input_as_handled()
-		dialogTimer.start()
-
-
 func _hideDialogBox() -> void:
 	dialogContent.hide()
+	emit_signal("dialogueFinishedSignal")
 
 
 func _showDialogBox(_dialogsArray: Array) -> void:
 	dialogsArray = _dialogsArray
 	dialogContent.show()
 	_showDialog(0)
+	dialogTimer.start()
 
 
 func _showDialog(index: int) -> void:
@@ -62,4 +53,4 @@ func _on_dialog_timer_timeout() -> void:
 		_showDialog(curr + 1)
 	else:
 		_hideDialogBox()
-		dialogTimer.stop()  # 停止Timer
+		dialogTimer.stop()
