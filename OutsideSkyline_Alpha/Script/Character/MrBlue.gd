@@ -12,9 +12,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if mrBlue.canInteractNow and event.is_action_pressed("ui_interact"):
-		DialogBox._showDialogBox(DramaScript._0_002)
+#func _unhandled_input(event: InputEvent) -> void:
+#	if mrBlue.canInteractNow and event.is_action_pressed("ui_interact"):
+#		DialogBox._showDialogBox(DramaScript._0_002)
 
 
 func _on_can_interact_area_body_entered(body: Node3D) -> void:

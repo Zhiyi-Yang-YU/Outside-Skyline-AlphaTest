@@ -78,4 +78,18 @@ const _0_002: Array = [
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Welcome Here, My friend"
 	},
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I just unlock the portal to real alpha test level"
+	},
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Enjoy~"
+	},
+]
+
+const _0_003: Array = [
+
 ]

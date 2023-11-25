@@ -45,9 +45,9 @@ var isInReality: bool = true
 @onready var standCollissionShape: CollisionShape3D = $Stand_CollisionShape3D
 @onready var crouchCollissionShape: CollisionShape3D = $Crouch_CollisionShape3D
 
-
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	connect("body_entered", _on_body_entered)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -60,6 +60,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			deg_to_rad(CAMERA_ROTATE_X_LIMIT_MAX)
 		)
 
+func _on_body_entered(body: Node) -> void:
+	pass
 
 func _physics_process(delta: float) -> void:
 	#跳跃
