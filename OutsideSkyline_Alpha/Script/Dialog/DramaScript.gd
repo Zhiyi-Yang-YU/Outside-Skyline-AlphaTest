@@ -16,6 +16,11 @@ const _TEST_MESSAGE: Array = [
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "Testing message 3C3C3C3"
 	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Testing message 4D4D4D4"
+	},
 ]
 
 const _0_001: Array = [
@@ -54,13 +59,33 @@ const _0_002: Array = [
 	},
 	{
 		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.ENEMY,
+		text = "You make me sad..."
+	},
+	{
+		speaker = "Player: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Just want to show you our reconstructed dialog system"
+		text = "Wait, why your name became red?:"
 	},
 	{
 		speaker = "Mr.Blue: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "I reference the Call of Duty 19's dialog Art Style"
+		text = "Just want to show you our reconstructed dialog system"
+	},
+	{
+		speaker = "Player: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "You scared me..."
+	},
+	{
+		speaker = "Player: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Just like Makarov in \"No Russian\", COD 6"
+	},
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Yes, Developer refers to the Call of Duty 19 Style"
 	},
 	{
 		speaker = "Mr.Blue: ",
@@ -73,12 +98,12 @@ const _0_002: Array = [
 		text = "Don't attack me, this is only a demo"
 	},
 	{
-		speaker = "Developer: ",
+		speaker = "Mr.Blue: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "When speaker is blue, friendlys are speaking"
 	},
 	{
-		speaker = "Developer: ",
+		speaker = "Mr.Blue: ",
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "When speaker is yellow,the speaker belongs to neutral camps"
 	},
@@ -93,27 +118,22 @@ const _0_002: Array = [
 		text = "Just want to try, I don't even know how to use this system..."
 	},
 	{	
-		speaker = "Developer: ", 
+		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL, 
 		text = "...in a walking sims"
 	},
 	{
-		speaker = "Developer: ",
-		speakerCamp = DialogBox.NEUTRAL,
-		text = "talk to Mr.Blue, He has something want to show you"
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I will send you to the real game milestone 2 level"
 	},
 	{
 		speaker = "Mr.Blue: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "I just unlock the portal to real alpha test level"
-	},
-	{
-		speaker = "Mr.Blue: ",
-		speakerCamp = DialogBox.FRIENDLY,
-		text = "Enjoy~"
+		text = "Enjoy :)"
 	},
 ]
 
-const _0_003: Array = [
+const _1_001: Array = [
 
 ]

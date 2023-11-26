@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-const COLOR_RED: String = "#ba5455"
-const COLOR_BLUE: String = "#73aed3"
-const COLOR_YELLOW: String = "#c4bf4d"
+const COLOR_RED: String = "#E4686B"
+const COLOR_BLUE: String = "#73AED3"
+const COLOR_YELLOW: String = "#DAC031"
 
 const FRIENDLY: String = COLOR_BLUE
 const NEUTRAL: String = COLOR_YELLOW

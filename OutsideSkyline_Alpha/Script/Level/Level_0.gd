@@ -7,41 +7,53 @@ var nextLevelScene: String = "res://OutsideSkyline_Alpha/Scene/Level/Level_0.tsc
 
 var eventNum: int = 0
 
-var event1_check: bool = false
-var event2_check: bool = false
-var event3_check: bool = false
-
-
-func _ready() -> void:
-	mrBlue.hide()
-	DialogBox._showDialogBox(DramaScript._0_001)
-	DialogBox.dialogueFinishedSignal.connect(_eventNumCountUp)
-	event1_check = true
-
-
-func _process(delta: float) -> void:
-	_eventManager()
+var _is_event_01_done: bool = false
+var _is_event_02_done: bool = false
+var _is_event_03_done: bool = false
 
 
 func _eventManager() -> void:
-	if eventNum == 1 and event1_check:
-		mrBlue.show()
-		_eventNumCountUp()
-		event1_check = false
-		event2_check = true
+	if eventNum == 1 and _is_event_01_done:
+		_eventList(1)
 
-	if eventNum == 2 and event2_check:
-		if Input.is_action_pressed("ui_interact") and mrBlue.canInteractNow:
-			DialogBox._showDialogBox(DramaScript._0_002)
-			mrBlue.isInteractable = false
-			event2_check = false
-			event3_check = true
+	if eventNum == 2 and _is_event_02_done:
+		_eventList(2)
 
-	if eventNum == 3 and event3_check:
-		mrBlue.queue_free()
-		get_tree().change_scene_to_file(nextLevelScene)
-		event3_check = false
+	if eventNum == 3 and _is_event_03_done:
+		_eventList(3)
+
+
+func _eventList(event_index: int) -> void:
+	match event_index:
+		0:
+			mrBlue.hide()
+			DialogBox._showDialogBox(DramaScript._0_001)
+			DialogBox.dialogueFinishedSignal.connect(_eventNumCountUp)
+			_is_event_01_done = true
+		1:
+			mrBlue.show()
+			_eventNumCountUp()
+			_is_event_01_done = false
+			_is_event_02_done = true
+		2:
+			if Input.is_action_pressed("ui_interact") and mrBlue.canInteractNow:
+				DialogBox._showDialogBox(DramaScript._0_002)
+				mrBlue.isInteractable = false
+				_is_event_02_done = false
+				_is_event_03_done = true
+		3:
+			mrBlue.queue_free()
+			get_tree().change_scene_to_file(nextLevelScene)
+			_is_event_03_done = false			
 
 
 func _eventNumCountUp() -> void:
 	eventNum += 1
+
+
+func _ready() -> void:
+	_eventList(0)
+
+
+func _process(delta: float) -> void:
+	_eventManager()

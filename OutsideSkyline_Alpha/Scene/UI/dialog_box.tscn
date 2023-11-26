@@ -6,7 +6,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_0ehcn"]
 font = ExtResource("2_xiuwo")
 font_size = 36
-font_color = Color(0.768627, 0.74902, 0.301961, 1)
+font_color = Color(0.854902, 0.752941, 0.192157, 1)
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
