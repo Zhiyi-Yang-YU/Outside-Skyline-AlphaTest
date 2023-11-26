@@ -1,15 +1,20 @@
 extends Node
 
-const TEST_MESSAGE: Array = [
+const _TEST_MESSAGE: Array = [
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "This is a testing message"
+		text = "Testing message 1A1A1A1"
 	},
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "Testing message end"
+		text = "Testing message 2B2B2B2"
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Testing message 3C3C3C3"
 	},
 ]
 
@@ -17,25 +22,53 @@ const _0_001: Array = [
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "Welcome to Alpha Test, This is developer speaking"
+		text = "Welcome to Alpha Test (Game Milestone 2), This is developer speaking"
 	},
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
+		text = "Don't rush to be dispointed on this, this level is not everything"
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Go talk to Mr.Blue, he wants to show you something"
+	},
+]
+
+const _0_002: Array = [
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Welcome back, My friend"
+	},
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "This is the last time you see me here"
+	},
+	{
+		speaker = "Player: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "em...Have we meet before?"
+	},
+	{
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
 		text = "Just want to show you our reconstructed dialog system"
 	},
 	{
-		speaker = "Developer: ",
-		speakerCamp = DialogBox.NEUTRAL,
+		speaker = "Mr.Blue: ",
+		speakerCamp = DialogBox.FRIENDLY,
 		text = "I reference the Call of Duty 19's dialog Art Style"
 	},
 	{
-		speaker = "Developer: ",
+		speaker = "Mr.Blue: ",
 		speakerCamp = DialogBox.ENEMY,
 		text = "When speaker is red, enemies are speaking"
 	},
 	{
-		speaker = "Developer: ",
+		speaker = "Mr.Blue: ",
 		speakerCamp = DialogBox.ENEMY,
 		text = "Don't attack me, this is only a demo"
 	},
@@ -59,24 +92,15 @@ const _0_001: Array = [
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "Just want to try, I don't even know how to use this system..."
 	},
-	{speaker = "Developer: ", speakerCamp = DialogBox.NEUTRAL, text = "...in a walking sims"},
+	{	
+		speaker = "Developer: ", 
+		speakerCamp = DialogBox.NEUTRAL, 
+		text = "...in a walking sims"
+	},
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "talk to Mr.Blue, He has something want to show you"
-	},
-]
-
-const _0_002: Array = [
-	{
-		speaker = "Mr.Blue: ",
-		speakerCamp = DialogBox.FRIENDLY,
-		text = "This is a dialog test"
-	},
-	{
-		speaker = "Mr.Blue: ",
-		speakerCamp = DialogBox.FRIENDLY,
-		text = "Welcome Here, My friend"
 	},
 	{
 		speaker = "Mr.Blue: ",

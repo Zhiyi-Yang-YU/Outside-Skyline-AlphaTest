@@ -3,13 +3,14 @@
 - Deadline: 2023/12/04
 
 ## TODO
-- 对话系统
-- 关卡事件流程
 - 目标指引
 - [在 Godot 引擎中制作 AAA 图形非常简单！](https://www.bilibili.com/video/BV1Pw411P7x1/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 
+
 ## DONE
 - NPC
+- 对话系统
+- 关卡事件流程
 
 
 ## Tutorial Used

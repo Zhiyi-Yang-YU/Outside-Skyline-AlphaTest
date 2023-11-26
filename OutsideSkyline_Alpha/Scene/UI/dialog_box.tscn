@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcgkqubno5qmk"]
 
-[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/DialogBox.gd" id="1_bhvf7"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Dialog/DialogBox.gd" id="1_wx68y"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Medium.ttf" id="2_xiuwo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ehcn"]
@@ -17,7 +17,7 @@ outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
 [node name="DialogBox" type="CanvasLayer"]
-script = ExtResource("1_bhvf7")
+script = ExtResource("1_wx68y")
 
 [node name="DialogContent" type="HBoxContainer" parent="."]
 anchors_preset = 12
@@ -49,6 +49,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DialogTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 1.7
 
 [connection signal="timeout" from="DialogTimer" to="." method="_on_dialog_timer_timeout"]

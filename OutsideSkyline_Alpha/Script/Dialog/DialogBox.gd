@@ -16,34 +16,24 @@ const ENEMY: String = COLOR_RED
 var dialogsArray: Array = []
 var curr: int = 0
 
+signal dialogueFinishedSignal
+
 
 func _ready() -> void:
 	_hideDialogBox()
-
-
 	dialogTimer.start()
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	# if event.is_action_pressed("ui_accept"):
-	# 	dialogTimer.stop()
-	# 	if curr + 1 < dialogsArray.size():
-	# 		_showDialog(curr + 1)
-	# 	else:
-	# 		_hideDialogBox()
-	# 	get_viewport().set_input_as_handled()
-	# 	dialogTimer.start()
-	pass
 
 
 func _hideDialogBox() -> void:
 	dialogContent.hide()
+	emit_signal("dialogueFinishedSignal")
 
 
 func _showDialogBox(_dialogsArray: Array) -> void:
 	dialogsArray = _dialogsArray
 	dialogContent.show()
 	_showDialog(0)
+	dialogTimer.start()
 
 
 func _showDialog(index: int) -> void:
@@ -51,22 +41,17 @@ func _showDialog(index: int) -> void:
 	speaker.text = dialogsArray[curr].speaker
 	_speakerColorSetUp(dialogsArray[curr].speakerCamp)
 	content.text = dialogsArray[curr].text
-	
+
 
 # Helpers
 func _speakerColorSetUp(hex_color: String) -> void:
 	speaker.label_settings.set_font_color(Color(hex_color))
 
 
-func load_dialogs_from_json(filePath: String) -> Array:
-	# TODO: 实现从json文件里读取对话
-	return []
-
-
-# Signals
 func _on_dialog_timer_timeout() -> void:
 	if curr + 1 < dialogsArray.size():
 		_showDialog(curr + 1)
 	else:
 		_hideDialogBox()
-		dialogTimer.stop() # 停止Timer
+		dialogTimer.stop()
+

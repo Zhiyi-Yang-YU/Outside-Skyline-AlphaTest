@@ -219,7 +219,7 @@ script = ExtResource("8_7m76s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
 
 [node name="MrBlue" parent="." instance=ExtResource("11_2g1du")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
 
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]

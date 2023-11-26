@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name PlayerCharacter
 
+var isInReality: bool = true
+
 #物理
 var currentSpeed: float
 var isCrouching: bool = false
@@ -10,7 +12,6 @@ const SPRINT_SPEED: float = 8.0
 
 const GRAVITATIONAL_ACCELERATION: float = 9.80665
 const REGULAR_JUMP_VELOCITY: float = 4.5
-
 const CROUCHING_DEPTH_LOCAL: float = -0.7
 
 #摄像机
@@ -37,17 +38,15 @@ const FLOOR_STOP_LERP_DELTA_SCALE: float = 7.0
 const FOV_LERP_DELTA_SCALE: float = 8.0
 const CROUCH_LERP_DELTA_SCALE: float = 10.0
 
-var isInReality: bool = true
-
 @onready var player: Node3D = $VisualNode
 @onready var head: Node3D = $VisualNode/Head
 @onready var camera: Camera3D = $VisualNode/Head/Camera3D
 @onready var standCollissionShape: CollisionShape3D = $Stand_CollisionShape3D
 @onready var crouchCollissionShape: CollisionShape3D = $Crouch_CollisionShape3D
 
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	connect("body_entered", _on_body_entered)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -60,8 +59,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			deg_to_rad(CAMERA_ROTATE_X_LIMIT_MAX)
 		)
 
-func _on_body_entered(body: Node) -> void:
-	pass
 
 func _physics_process(delta: float) -> void:
 	#跳跃

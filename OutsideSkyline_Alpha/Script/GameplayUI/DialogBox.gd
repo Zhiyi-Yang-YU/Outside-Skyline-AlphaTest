@@ -18,6 +18,7 @@ var curr: int = 0
 
 signal dialogueFinishedSignal
 
+
 func _ready() -> void:
 	_hideDialogBox()
 	dialogTimer.start()

@@ -4,12 +4,12 @@ extends Node3D
 var canInteractNow: bool = false
 
 @export var npcName: String = "default NPC Name"
+@onready var npcLabel: Label3D = $VisualNode/NPCNameLabel
 var ui: Node3D
 var ui_npcInteractInfo: Label
 var canInteractLabel: String = "Press 'E' to interact with XXX"
 var canNOTInteractLabel: String = ""
 
-@onready var npcLabel: Label3D = $VisualNode/NPCNameLabel
 
 var player: CharacterBody3D
 var playerCamera: Camera3D
@@ -24,6 +24,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not isInteractable:
 		canInteractNow = false
+		npcLabel.hide()
+		ui_npcInteractInfo.hide()
 
 	_npcLabelSetup()
 
@@ -33,8 +35,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _findPlayer() -> void:
-	var playersArray = get_tree().get_nodes_in_group("Player")  # 查找添加到 "Player" 组的所有节点
-	if playersArray.size() > 0:  # 确保至少有一个玩家节点被找到
+	var playersArray = get_tree().get_nodes_in_group("Player")
+	if playersArray.size() > 0:
 		player = playersArray[0] as CharacterBody3D
 		playerCamera = player.get_node("VisualNode/Head/Camera3D") as Camera3D
 	else:
@@ -64,7 +66,6 @@ func _LabelFace2Camera() -> void:
 
 func _npcLabelSetup() -> void:
 	if not isInteractable:
-		npcLabel.text = ""
 		pass
 	else:
 		npcLabel.text = npcName
@@ -76,10 +77,10 @@ func _on_can_interact_area_body_entered(playerNode: Node3D) -> void:
 		pass
 	else:
 		if not playerNode.is_in_group("Player"):
-			ui_npcInteractInfo.visible = false
+			ui_npcInteractInfo.hide()
 			canInteractNow = false
 		else:
-			ui_npcInteractInfo.visible = true
+			ui_npcInteractInfo.show()
 			ui_npcInteractInfo.text = canInteractLabel
 			canInteractNow = true
 
@@ -89,9 +90,9 @@ func _on_can_interact_area_body_exited(playerNode: Node3D) -> void:
 		pass
 	else:
 		if not playerNode.is_in_group("Player"):
-			ui_npcInteractInfo.visible = false
+			ui_npcInteractInfo.hide()
 			canInteractNow = false
 		else:
-			ui_npcInteractInfo.visible = false
+			ui_npcInteractInfo.hide()
 			ui_npcInteractInfo.text = canNOTInteractLabel
 			canInteractNow = false
