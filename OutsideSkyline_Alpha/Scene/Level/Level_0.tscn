@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=18 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Reality.tscn" id="1_46ffi"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level/Level.gd" id="1_gt1kv"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameManager.gd" id="3_gjmi4"]
 [ext_resource type="PackedScene" uid="uid://5sguweeqt816" path="res://OutsideSkyline_Alpha/Scene/Level/Basic_Level_Memory.tscn" id="3_n7no7"]
+[ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/DrawCrosshair.gd" id="5_bneg4"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline_Alpha/Scene/Character/Player.tscn" id="5_gsoxp"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/GameplayUI/GameplayUI_Manager.gd" id="5_p43ex"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://OutsideSkyline_Alpha/Font/JetBrainsMono-Bold.ttf" id="6_d8lwe"]
@@ -11,6 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://dcgkqubno5qmk" path="res://OutsideSkyline_Alpha/Scene/UI/dialog_box.tscn" id="8_002b4"]
 [ext_resource type="Script" path="res://OutsideSkyline_Alpha/Script/Level/Level_0.gd" id="8_7m76s"]
 [ext_resource type="PackedScene" uid="uid://blcttmk3qb230" path="res://OutsideSkyline_Alpha/Scene/Character/MrBlue.tscn" id="11_2g1du"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
+font = ExtResource("6_d8lwe")
+font_size = 72
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2lrq"]
+font = ExtResource("7_rodwu")
+font_size = 42
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -25,33 +34,9 @@ sky = SubResource("Sky_w8o80")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
-font = ExtResource("6_d8lwe")
-font_size = 72
-
-[sub_resource type="LabelSettings" id="LabelSettings_d2lrq"]
-font = ExtResource("7_rodwu")
-font_size = 42
-
 [node name="Node3D" type="Node3D"]
 process_mode = 3
 script = ExtResource("1_gt1kv")
-
-[node name="Setting" type="Node3D" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Setting"]
-environment = SubResource("Environment_qpju7")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Setting"]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
-
-[node name="GameLevel" type="Node3D" parent="."]
-
-[node name="RealityLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
-
-[node name="MemoryLevel" parent="GameLevel" instance=ExtResource("3_n7no7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
 
 [node name="UI" type="Node3D" parent="." groups=["UI"]]
 script = ExtResource("5_p43ex")
@@ -207,13 +192,52 @@ layout_mode = 2
 text = "Interact target Info Label"
 label_settings = SubResource("LabelSettings_d2lrq")
 
-[node name="DialogBox" parent="UI" instance=ExtResource("8_002b4")]
+[node name="Control_Crosshair" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
 
-[node name="GameManager" type="Node3D" parent="."]
-script = ExtResource("3_gjmi4")
+[node name="Crosshair_CenterContainer" type="CenterContainer" parent="UI/Control_Crosshair"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DrawCrosshair" type="Control" parent="UI/Control_Crosshair/Crosshair_CenterContainer"]
+layout_mode = 2
+script = ExtResource("5_bneg4")
+
+[node name="DialogBox" parent="UI" instance=ExtResource("8_002b4")]
 
 [node name="Level0_Component" type="Node3D" parent="."]
 script = ExtResource("8_7m76s")
+
+[node name="Setting" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Setting"]
+environment = SubResource("Environment_qpju7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Setting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="GameLevel" type="Node3D" parent="."]
+
+[node name="RealityLevel" parent="GameLevel" instance=ExtResource("1_46ffi")]
+
+[node name="MemoryLevel" parent="GameLevel" instance=ExtResource("3_n7no7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+
+[node name="GameManager" type="Node3D" parent="."]
+script = ExtResource("3_gjmi4")
 
 [node name="Player" parent="." instance=ExtResource("5_gsoxp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)

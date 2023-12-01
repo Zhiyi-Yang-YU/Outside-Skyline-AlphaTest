@@ -10,8 +10,6 @@ func _process(delta: float) -> void:
 
 func pauseGame() -> void:
 	if Input.is_action_just_pressed("ui_pause"):
-		# 实现不了一点，谁家好人能把游戏暂停菜单写成状态机啊！
-		# 要我说，删了算了，反正用不上
 		# _toggleHow2playUIHelper()
 		_toggleOptionUIHelper()
 
