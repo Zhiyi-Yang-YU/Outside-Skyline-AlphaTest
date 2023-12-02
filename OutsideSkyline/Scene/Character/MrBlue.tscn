@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Character/NPC.gd" id="1_pgid5"]
 [ext_resource type="Material" uid="uid://drik12fpjav2" path="res://Assets/Material/Texture_BLUE.tres" id="2_anile"]
 [ext_resource type="FontFile" uid="uid://sklftt7ai8dk" path="res://Assets/Font/JetBrainsMono-Regular.ttf" id="3_j1b7q"]
-[ext_resource type="PackedScene" uid="uid://b3fgywjemgv2i" path="res://OutsideSkyline/Scene/UI/target_reticles.tscn" id="4_pt74a"]
+[ext_resource type="PackedScene" uid="uid://b3fgywjemgv2i" path="res://OutsideSkyline/Scene/UI/targetMark_itemnpc.tscn" id="4_pt74a"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
 
@@ -15,11 +15,6 @@ radius = 3.0
 [node name="MrBlue" type="Node3D" groups=["PlayerGroup"]]
 process_mode = 1
 script = ExtResource("1_pgid5")
-npcName = "Mr.Blue"
-
-[node name="TargetReticles" parent="." node_paths=PackedStringArray("obj") instance=ExtResource("4_pt74a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
-obj = NodePath("..")
 
 [node name="VisualNode" type="Node3D" parent="."]
 
@@ -47,6 +42,10 @@ shape = SubResource("CapsuleShape3D_42di8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
 shape = SubResource("SphereShape3D_wcjrv")
+
+[node name="TargetMark_itemnpc" parent="." node_paths=PackedStringArray("obj") instance=ExtResource("4_pt74a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+obj = NodePath("..")
 
 [connection signal="body_entered" from="CanInteractArea" to="." method="_on_can_interact_area_body_entered"]
 [connection signal="body_exited" from="CanInteractArea" to="." method="_on_can_interact_area_body_exited"]
