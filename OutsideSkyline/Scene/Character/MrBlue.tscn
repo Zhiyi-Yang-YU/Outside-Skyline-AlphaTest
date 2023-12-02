@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://blcttmk3qb230"]
+
+[ext_resource type="Script" path="res://OutsideSkyline/Script/Character/NPC.gd" id="1_pgid5"]
+[ext_resource type="Material" uid="uid://drik12fpjav2" path="res://Assets/Material/Texture_BLUE.tres" id="2_anile"]
+[ext_resource type="FontFile" uid="uid://sklftt7ai8dk" path="res://Assets/Font/JetBrainsMono-Regular.ttf" id="3_j1b7q"]
+[ext_resource type="PackedScene" uid="uid://b3fgywjemgv2i" path="res://OutsideSkyline/Scene/UI/target_reticles.tscn" id="4_pt74a"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_42di8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wcjrv"]
+radius = 3.0
+
+[node name="MrBlue" type="Node3D" groups=["PlayerGroup"]]
+process_mode = 1
+script = ExtResource("1_pgid5")
+npcName = "Mr.Blue"
+
+[node name="TargetReticles" parent="." node_paths=PackedStringArray("obj") instance=ExtResource("4_pt74a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+obj = NodePath("..")
+
+[node name="VisualNode" type="Node3D" parent="."]
+
+[node name="Body" type="Node3D" parent="VisualNode"]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="VisualNode/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("2_anile")
+mesh = SubResource("CapsuleMesh_daxel")
+skeleton = NodePath("../..")
+
+[node name="NPCNameLabel" type="Label3D" parent="VisualNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+text = "Mr.Blue"
+font = ExtResource("3_j1b7q")
+font_size = 50
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="Stand_CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_42di8")
+
+[node name="CanInteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
+shape = SubResource("SphereShape3D_wcjrv")
+
+[connection signal="body_entered" from="CanInteractArea" to="." method="_on_can_interact_area_body_entered"]
+[connection signal="body_exited" from="CanInteractArea" to="." method="_on_can_interact_area_body_exited"]

@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="Outside-Skyline"
-run/main_scene="res://OutsideSkyline_Alpha/Scene/Level/Level_0.tscn"
+run/main_scene="res://OutsideSkyline/Scene/Level/Level_0.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-SystemHQ="*res://OutsideSkyline_Alpha/Script/Settings/SystemHQ.gd"
-DialogBox="*res://OutsideSkyline_Alpha/Scene/UI/dialog_box.tscn"
-DramaScript="*res://OutsideSkyline_Alpha/Script/Dialog/DramaScript.gd"
+SystemHQ="*res://OutsideSkyline/Script/Settings/SystemHQ.gd"
+DialogBox="*res://OutsideSkyline/Scene/UI/dialog_box.tscn"
+DramaScript="*res://OutsideSkyline/Script/Dialog/DramaScript.gd"
 
 [display]
 

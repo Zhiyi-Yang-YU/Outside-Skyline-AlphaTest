@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0s8kdotmhivi"]
+
+[ext_resource type="Script" path="res://OutsideSkyline/Script/Character/Player.gd" id="1_2h2of"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_42di8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6sh5p"]
+height = 1.2
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+process_mode = 1
+script = ExtResource("1_2h2of")
+
+[node name="VisualNode" type="Node3D" parent="."]
+
+[node name="Head" type="Node3D" parent="VisualNode"]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 1.8, 0)
+
+[node name="Camera3D" type="Camera3D" parent="VisualNode/Head"]
+transform = Transform3D(0.555556, 0, 0, 0, 0.555556, 0, 0, 0, 0.555556, 0, 0, 0)
+
+[node name="Body" type="Node3D" parent="VisualNode"]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="VisualNode/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_daxel")
+skeleton = NodePath("../..")
+
+[node name="Stand_CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_42di8")
+
+[node name="Crouch_CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CapsuleShape3D_6sh5p")
+disabled = true
