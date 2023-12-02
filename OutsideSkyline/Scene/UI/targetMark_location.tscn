@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx13y3npbmx4m"]
+
+[ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/TargetMark_location.gd" id="1_2lgcu"]
+[ext_resource type="Texture2D" uid="uid://csw28l75fgvve" path="res://Assets/UI_Asset/CrossHair/PNG/Outline/crosshair180.png" id="2_oyp7b"]
+[ext_resource type="Texture2D" uid="uid://bu3iq5c828fj" path="res://Assets/UI_Asset/CrossHair/PNG/Outline Retina/crosshair022.png" id="3_7lmvw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_psnsj"]
+radius = 3.0
+
+[node name="TargetMark_location" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+script = ExtResource("1_2lgcu")
+
+[node name="QuitArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuitArea"]
+shape = SubResource("SphereShape3D_psnsj")
+
+[node name="TargetReticle" type="TextureRect" parent="."]
+modulate = Color(1, 0.833333, 0, 1)
+offset_right = 72.0
+offset_bottom = 72.0
+texture = ExtResource("2_oyp7b")
+
+[node name="OffscreenReticle" type="TextureRect" parent="."]
+modulate = Color(1, 0.833333, 0, 1)
+offset_right = 144.0
+offset_bottom = 144.0
+pivot_offset = Vector2(72, 72)
+texture = ExtResource("3_7lmvw")
+
+[connection signal="body_entered" from="QuitArea" to="." method="_on_quit_area_body_entered"]

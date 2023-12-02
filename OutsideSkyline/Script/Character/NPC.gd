@@ -14,7 +14,7 @@ var ui_npcInteractInfo: Label
 var canInteractLabel: String = "Press 'E' to interact with XXX"
 var canNOTInteractLabel: String = ""
 
-@onready var targetMark: Node3D = $TargetReticles
+@onready var targetMark: Node3D = $TargetMark_itemnpc
 
 var isTarget: bool:
 	set(new_value):
@@ -23,10 +23,10 @@ var isTarget: bool:
 
 signal SIGThisIsTarget(newValue)
 
+
 func _ready() -> void:
 	_findPlayer()
 	_findUI()
-
 
 
 func _process(delta: float) -> void:
