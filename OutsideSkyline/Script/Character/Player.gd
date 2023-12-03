@@ -1,6 +1,7 @@
 extends CharacterBody3D
 class_name PlayerCharacter
 
+@export var canSwitchReality: bool = true
 var isInReality: bool = true
 
 #物理
@@ -152,12 +153,15 @@ func sprintFOV(dt: float) -> void:
 
 
 func switchRealityANDMemory() -> void:
-	if Input.is_action_just_pressed("ui_switchRealityANDMemory") and is_on_floor():
-		if isInReality:
-			global_position.y = global_position.y + SystemHQ.MEMORY_SENCE_HEIGHT
-		else:
-			global_position.y = (
-				global_position.y - SystemHQ.MEMORY_SENCE_HEIGHT + SystemHQ.REALITY_SENCE_HEIGHT
-			)
+	if not canSwitchReality:
+		pass
+	else:
+		if Input.is_action_just_pressed("ui_switchRealityANDMemory") and is_on_floor():
+			if isInReality:
+				global_position.y = global_position.y + SystemHQ.MEMORY_SENCE_HEIGHT
+			else:
+				global_position.y = (
+					global_position.y - SystemHQ.MEMORY_SENCE_HEIGHT + SystemHQ.REALITY_SENCE_HEIGHT
+				)
 
-		isInReality = not isInReality
+			isInReality = not isInReality

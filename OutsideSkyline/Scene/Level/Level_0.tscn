@@ -220,6 +220,7 @@ script = ExtResource("9_2enm1")
 
 [node name="Player" parent="." instance=ExtResource("10_2vfgd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+canSwitchReality = false
 
 [node name="MrBlue" parent="." instance=ExtResource("11_n4bsk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
