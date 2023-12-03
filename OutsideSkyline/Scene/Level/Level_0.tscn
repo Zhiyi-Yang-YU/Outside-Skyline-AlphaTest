@@ -37,6 +37,7 @@ glow_enabled = true
 
 [node name="Node3D" type="Node3D" node_paths=PackedStringArray("realityScene", "memoryScene")]
 process_mode = 3
+transform = Transform3D(1.00053, 0, 0, 0, 1.00053, 0, 0, 0, 1.00053, 0, 0, 0)
 script = ExtResource("1_my4ed")
 realityScene = NodePath("GameLevel/RealityLevel")
 memoryScene = NodePath("GameLevel/MemoryLevel")
