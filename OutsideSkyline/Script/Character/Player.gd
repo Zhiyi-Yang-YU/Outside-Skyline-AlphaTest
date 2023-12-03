@@ -6,9 +6,9 @@ var isInReality: bool = true
 #物理
 var currentSpeed: float
 var isCrouching: bool = false
-const WALK_SPEED: float = 5.0
-const CROUCH_SPEED: float = 3.0
-const SPRINT_SPEED: float = 8.0
+const WALK_SPEED: float = 4.5
+const SPRINT_SPEED: float = 6.0
+const CROUCH_SPEED: float = 1.0
 
 const GRAVITATIONAL_ACCELERATION: float = 9.80665
 const REGULAR_JUMP_VELOCITY: float = 4.5

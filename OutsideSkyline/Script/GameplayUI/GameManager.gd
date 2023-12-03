@@ -10,7 +10,6 @@ func _process(delta: float) -> void:
 
 func pauseGame() -> void:
 	if Input.is_action_just_pressed("ui_pause"):
-		# _toggleHow2playUIHelper()
 		_toggleOptionUIHelper()
 
 

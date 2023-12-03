@@ -97,6 +97,7 @@ layout_mode = 2
 text = "How to play ?"
 
 [node name="GameOptionButton" type="Button" parent="UI/Control_GameMenuUI/GamePause"]
+visible = false
 layout_mode = 2
 text = "Option"
 
