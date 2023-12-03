@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=21 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level.gd" id="1_my4ed"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameplayUI_Manager.gd" id="2_tt6jw"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline/Scene/Level/Basic_Level_Reality.tscn" id="7_1kvu1"]
 [ext_resource type="PackedScene" uid="uid://dgoknp80oh6sv" path="res://OutsideSkyline/Scene/props/helocopter.tscn" id="7_osw5m"]
 [ext_resource type="PackedScene" uid="uid://5sguweeqt816" path="res://OutsideSkyline/Scene/Level/Basic_Level_Memory.tscn" id="8_3plam"]
+[ext_resource type="PackedScene" uid="uid://bok2ptybg2ot1" path="res://OutsideSkyline/Scene/props/police_car.tscn" id="8_qo34e"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="9_2enm1"]
+[ext_resource type="PackedScene" uid="uid://c3l0i105w437r" path="res://OutsideSkyline/Scene/Character/Police.tscn" id="9_aa17l"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="10_2vfgd"]
+[ext_resource type="PackedScene" uid="uid://wmnui5t3s7ey" path="res://OutsideSkyline/Scene/VFX/fire_vfx.tscn" id="11_jwi7g"]
 [ext_resource type="PackedScene" uid="uid://blcttmk3qb230" path="res://OutsideSkyline/Scene/Character/MrBlue.tscn" id="11_n4bsk"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level_0.gd" id="12_wu6cc"]
 
@@ -213,20 +216,34 @@ shadow_enabled = true
 
 [node name="RealityLevel" parent="GameLevel" instance=ExtResource("7_1kvu1")]
 
-[node name="helocopter" parent="GameLevel/RealityLevel" instance=ExtResource("7_osw5m")]
+[node name="Helocopter" parent="GameLevel/RealityLevel" instance=ExtResource("7_osw5m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0181, 0, 0)
 
+[node name="PoliceCar" parent="GameLevel/RealityLevel" instance=ExtResource("8_qo34e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.881, 0, 19.636)
+
+[node name="Police" parent="GameLevel/RealityLevel" instance=ExtResource("9_aa17l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4958, 0.0211136, 16.0478)
+isInteractable = false
+
+[node name="Police2" parent="GameLevel/RealityLevel" instance=ExtResource("9_aa17l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 18.2334, 0, 18.6099)
+isInteractable = false
+
+[node name="MrBlue" parent="GameLevel/RealityLevel" instance=ExtResource("11_n4bsk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
+
+[node name="FireVFX" parent="GameLevel/RealityLevel" instance=ExtResource("11_jwi7g")]
+transform = Transform3D(2.4, 0, 0, 0, 1, 0, 0, 0, 2.7, 13.1824, 1.88605, 6.1465)
+
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("8_3plam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0195498, 99.9999, 0.0116997)
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("9_2enm1")
 
 [node name="Player" parent="." instance=ExtResource("10_2vfgd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
-
-[node name="MrBlue" parent="." instance=ExtResource("11_n4bsk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
 
 [node name="Level0_Component" type="Node3D" parent="."]
 script = ExtResource("12_wu6cc")

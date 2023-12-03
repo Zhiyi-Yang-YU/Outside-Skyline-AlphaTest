@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var player: CharacterBody3D = $"../Player"
-@onready var mrBlue: Node3D = $"../MrBlue"
+@onready var mrBlue: Node3D = $"../GameLevel/RealityLevel/MrBlue"
 
 var eventNum: int = 0
 

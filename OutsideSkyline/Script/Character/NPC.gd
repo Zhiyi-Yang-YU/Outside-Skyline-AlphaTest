@@ -12,7 +12,7 @@ var canInteractNow: bool = false
 var ui: Node3D
 var ui_npcInteractInfo: Label
 var canInteractLabel: String = "Press 'E' to interact with XXX"
-var canNOTInteractLabel: String = ""
+var canNOTInteractLabel: String = "Cannot interact with XXX"
 
 @onready var targetMark: Node3D = $TargetMark_itemnpc
 
@@ -32,7 +32,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not isInteractable:
 		canInteractNow = false
-		ui_npcInteractInfo.hide()
 
 	_npcLabelSetup()
 
@@ -70,7 +69,8 @@ func _LabelFace2Camera() -> void:
 
 func _npcLabelSetup() -> void:
 	if not isInteractable:
-		pass
+		npcLabel.text = npcName
+		canNOTInteractLabel = "Cannot interact with " + npcName
 	else:
 		npcLabel.text = npcName
 		canInteractLabel = "Press 'E' to interact with " + npcName
@@ -78,7 +78,7 @@ func _npcLabelSetup() -> void:
 
 func _on_can_interact_area_body_entered(playerNode: Node3D) -> void:
 	if not isInteractable:
-		pass
+		ui_npcInteractInfo.hide()
 	else:
 		if not playerNode.is_in_group("Player"):
 			ui_npcInteractInfo.hide()
@@ -91,7 +91,7 @@ func _on_can_interact_area_body_entered(playerNode: Node3D) -> void:
 
 func _on_can_interact_area_body_exited(playerNode: Node3D) -> void:
 	if not isInteractable:
-		pass
+		ui_npcInteractInfo.hide()
 	else:
 		if not playerNode.is_in_group("Player"):
 			ui_npcInteractInfo.hide()

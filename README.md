@@ -21,6 +21,7 @@
 - [【Godot教程】如何实现对话系统](https://www.bilibili.com/video/BV1y64y127n5/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 - [Godot 4 创建3D离屏和屏上目标指示器，用HUD标线跟踪屏幕上和屏幕外的敌人位置！](https://www.bilibili.com/video/BV1Cu4y1a7Us/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 - [Terrain3D - The New Terrain Engine for Godot](https://youtu.be/NwJEXOglBrQ?si=eSt-Cj0U1psmrixy)
+- [GODOT VFX - Stylized Fire Effect Tutorial](https://youtu.be/R3xMwfrlTI8?si=1inAYJ0TDuZJaspE)
 
 ## Resources Reference
 - Addons
@@ -28,6 +29,7 @@
 - Texture
   - [Greybox Texture](https://github.com/lukky-nl/FPS-controller-assets)
   - [Crosshair Pack](https://www.kenney.nl/assets/crosshair-pack)
+  - [Fire Texture](https://www.patreon.com/posts/godot-vfx-fire-90253805)
 - Models
   - [Car Kit](https://www.kenney.nl/assets/car-kit)
   - [City Kit (Suburban)](https://www.kenney.nl/assets/city-kit-suburban)
