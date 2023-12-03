@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://c3l0i105w437r"]
+
+[ext_resource type="Script" path="res://OutsideSkyline/Script/Character/NPC.gd" id="1_fxflb"]
+[ext_resource type="FontFile" uid="uid://sklftt7ai8dk" path="res://Assets/Font/JetBrainsMono-Regular.ttf" id="3_w1yiv"]
+[ext_resource type="Material" uid="uid://bcervd0agc4sx" path="res://Assets/Material/Texture_DARK_BLUE.tres" id="4_f5cv4"]
+[ext_resource type="PackedScene" uid="uid://b3fgywjemgv2i" path="res://OutsideSkyline/Scene/UI/targetMark_itemnpc.tscn" id="4_mrfen"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_njx4x"]
+bottom_radius = 0.4
+height = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_vovkl"]
+size = Vector3(0.6, 0.4, 0.01)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_42di8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wcjrv"]
+radius = 3.0
+
+[node name="Police" type="Node3D" groups=["PlayerGroup"]]
+process_mode = 1
+script = ExtResource("1_fxflb")
+npcName = "Police"
+
+[node name="VisualNode" type="Node3D" parent="."]
+
+[node name="NPCNameLabel" type="Label3D" parent="VisualNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+text = "Mr.Blue"
+font = ExtResource("3_w1yiv")
+font_size = 50
+
+[node name="Body" type="Node3D" parent="VisualNode"]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="VisualNode/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("4_f5cv4")
+mesh = SubResource("CapsuleMesh_daxel")
+skeleton = NodePath("../..")
+
+[node name="Head" type="Node3D" parent="VisualNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86109, 0)
+
+[node name="HeadMesh" type="MeshInstance3D" parent="VisualNode/Head"]
+material_override = ExtResource("4_f5cv4")
+mesh = SubResource("CylinderMesh_njx4x")
+
+[node name="PoliceHatMesh" type="MeshInstance3D" parent="VisualNode/Head"]
+transform = Transform3D(1, 0, 0, 0, 0.263031, 0.964787, 0, -0.964787, 0.263031, 0, -0.0882788, 0.520913)
+material_override = ExtResource("4_f5cv4")
+mesh = SubResource("BoxMesh_vovkl")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="Stand_CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_42di8")
+
+[node name="CanInteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
+shape = SubResource("SphereShape3D_wcjrv")
+
+[node name="TargetMark_itemnpc" parent="." node_paths=PackedStringArray("obj") instance=ExtResource("4_mrfen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+obj = NodePath("..")
+
+[connection signal="body_entered" from="CanInteractArea" to="." method="_on_can_interact_area_body_entered"]
+[connection signal="body_exited" from="CanInteractArea" to="." method="_on_can_interact_area_body_exited"]

@@ -3,8 +3,6 @@ extends Node3D
 @onready var player: CharacterBody3D = $"../Player"
 @onready var mrBlue: Node3D = $"../MrBlue"
 
-var nextLevelScene: String = "res://OutsideSkyline/Scene/Level/Level_0.tscn"
-
 var eventNum: int = 0
 
 var _is_event_01_done: bool = false
@@ -45,7 +43,7 @@ func _eventList(event_index: int) -> void:
 				_is_event_03_done = true
 		3:
 			mrBlue.queue_free()
-			get_tree().change_scene_to_file(nextLevelScene)
+			SystemHQ.changeLevel(LevelReference._LEVEL_1)
 			_is_event_03_done = false
 
 

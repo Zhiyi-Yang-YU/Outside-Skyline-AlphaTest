@@ -32,7 +32,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not isInteractable:
 		canInteractNow = false
-		npcLabel.hide()
+		# npcLabel.hide()
 		ui_npcInteractInfo.hide()
 
 	_npcLabelSetup()
@@ -64,12 +64,9 @@ func _findUI() -> void:
 
 
 func _LabelFace2Camera() -> void:
-	if not isInteractable:
-		pass
-	else:
-		playerCameraPosition = playerCamera.global_transform.origin
-		npcLabel.look_at(playerCameraPosition, Vector3.UP)
-		npcLabel.scale.x = -1
+	playerCameraPosition = playerCamera.global_transform.origin
+	npcLabel.look_at(playerCameraPosition, Vector3.UP)
+	npcLabel.scale.x = -1
 
 
 func _npcLabelSetup() -> void:

@@ -2,8 +2,8 @@ extends Node3D
 
 @onready var player: CharacterBody3D = $Player
 
-@onready var realityScene: Node3D = $GameLevel/RealityLevel
-@onready var memoryScene: Node3D = $GameLevel/MemoryLevel
+@export var realityScene: Node3D
+@export var memoryScene: Node3D
 
 
 func _ready() -> void:
