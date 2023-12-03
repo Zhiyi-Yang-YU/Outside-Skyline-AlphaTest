@@ -32,7 +32,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not isInteractable:
 		canInteractNow = false
-		# npcLabel.hide()
 		ui_npcInteractInfo.hide()
 
 	_npcLabelSetup()

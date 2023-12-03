@@ -33,7 +33,6 @@ func _ready() -> void:
 	camera = get_viewport().get_camera_3d()
 	viewportCenterPosition = Vector2(get_viewport().size) / 2.0
 	maxReticlePosition = viewportCenterPosition - BORDER_OFFSET_POSITION
-	# obj.SIGThisIsTarget.connect(_updateCanShowTargetMark)
 
 
 func _process(delta: float) -> void:
@@ -82,9 +81,7 @@ func _drawTargetDirection() -> void:
 			
 			offScreenTargetDirection = Vector2.UP.angle_to(reticlePosition)
 			offScreenReticle.rotation = offScreenTargetDirection
-
+	
 
 # func _updateCanShowTargetMark(newValue: bool) -> void:
 # 	canShowTargetMark = newValue
-	
-

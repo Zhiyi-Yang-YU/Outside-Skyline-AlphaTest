@@ -3,10 +3,12 @@ extends CanvasLayer
 const COLOR_RED: String = "#E4686B"
 const COLOR_BLUE: String = "#73AED3"
 const COLOR_YELLOW: String = "#DAC031"
+const COLOR_GREEN: String = "#15C813"
 
 const FRIENDLY: String = COLOR_BLUE
 const NEUTRAL: String = COLOR_YELLOW
 const ENEMY: String = COLOR_RED
+const SYSTEM: String = COLOR_GREEN
 
 @onready var dialogContent: HBoxContainer = $DialogContent
 @onready var speaker: Label = $DialogContent/Speaker

@@ -192,6 +192,11 @@ const _1_001: Array = [
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "(Screaming)"
 	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "You weaked up"
+	},
 ]
 
 const _2_001: Array = []

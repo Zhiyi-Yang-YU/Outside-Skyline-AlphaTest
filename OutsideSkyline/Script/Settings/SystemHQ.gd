@@ -8,8 +8,10 @@ const MEMORY_SENCE_HEIGHT: float = 100.0
 func quitGame() -> void:
 	get_tree().quit()
 
+
 func changeLevel(nextLevelScene: String) -> void:
 	get_tree().change_scene_to_file(nextLevelScene)
+
 
 # 对象本地化
 func instantiateScene_addChild(targetScene: PackedScene, parent: Node3D) -> Node3D:
