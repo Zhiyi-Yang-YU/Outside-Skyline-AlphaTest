@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvy26ns0uaolc"]
+[gd_scene load_steps=18 format=3 uid="uid://dvy26ns0uaolc"]
 
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level.gd" id="1_my4ed"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameplayUI_Manager.gd" id="2_tt6jw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bidjwydp3xerk" path="res://OutsideSkyline/Scene/UI/control_crosshair.tscn" id="3_jgrm0"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://Assets/Font/JetBrainsMono-Medium.ttf" id="4_mx11v"]
 [ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline/Scene/Level/Basic_Level_Reality.tscn" id="7_1kvu1"]
+[ext_resource type="PackedScene" uid="uid://dgoknp80oh6sv" path="res://OutsideSkyline/Scene/props/helocopter.tscn" id="7_osw5m"]
 [ext_resource type="PackedScene" uid="uid://5sguweeqt816" path="res://OutsideSkyline/Scene/Level/Basic_Level_Memory.tscn" id="8_3plam"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="9_2enm1"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="10_2vfgd"]
@@ -37,7 +38,7 @@ glow_enabled = true
 
 [node name="Node3D" type="Node3D" node_paths=PackedStringArray("realityScene", "memoryScene")]
 process_mode = 3
-transform = Transform3D(1.00053, 0, 0, 0, 1.00053, 0, 0, 0, 1.00053, 0, 0, 0)
+transform = Transform3D(0.998611, 0, 0, 0, 0.998611, 0, 0, 0, 0.998611, 0, 0, 0)
 script = ExtResource("1_my4ed")
 realityScene = NodePath("GameLevel/RealityLevel")
 memoryScene = NodePath("GameLevel/MemoryLevel")
@@ -211,6 +212,9 @@ shadow_enabled = true
 [node name="GameLevel" type="Node3D" parent="."]
 
 [node name="RealityLevel" parent="GameLevel" instance=ExtResource("7_1kvu1")]
+
+[node name="helocopter" parent="GameLevel/RealityLevel" instance=ExtResource("7_osw5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0181, 0, 0)
 
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("8_3plam")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
