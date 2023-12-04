@@ -72,7 +72,7 @@ func _eventList(event_index: int) -> void:
 		4:
 			helloWorldFollower.setAsTarget(true)
 			if Input.is_action_pressed("ui_interact") and helloWorldFollower.canInteractNow:
-				DialogBox._showDialogBox(DramaScript._TEST_MESSAGE)
+				DialogBox._showDialogBox(DramaScript._2_003)
 				helloWorldFollower.isInteractable = false
 				helloWorldFollower.setAsTarget(false)
 

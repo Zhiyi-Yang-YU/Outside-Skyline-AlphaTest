@@ -1,11 +1,26 @@
 extends Node
 
-
 const _TEST_MESSAGE: Array = [
-	{speaker = "Developer: ", speakerCamp = DialogBox.FRIENDLY, text = "Testing message 1A1A1A1"},
-	{speaker = "Developer: ", speakerCamp = DialogBox.NEUTRAL, text = "Testing message 2B2B2B2"},
-	{speaker = "Developer: ", speakerCamp = DialogBox.ENEMY, text = "Testing message 3C3C3C3"},
-	{speaker = "Developer: ", speakerCamp = DialogBox.SYSTEM, text = "Testing message 4D4D4D4"},
+	{
+		speaker = "Developer: ", 
+		speakerCamp = DialogBox.FRIENDLY, 
+		text = "Testing message 1A1A1A1"
+	},
+	{
+		speaker = "Developer: ", 
+		speakerCamp = DialogBox.NEUTRAL, 
+		text = "Testing message 2B2B2B2"
+	},
+	{
+		speaker = "Developer: ", 
+		speakerCamp = DialogBox.ENEMY, 
+		text = "Testing message 3C3C3C3"
+	},
+	{
+		speaker = "Developer: ", 
+		speakerCamp = DialogBox.SYSTEM, 
+		text = "Testing message 4D4D4D4"
+	},
 ]
 
 const _0_001: Array = [
@@ -17,7 +32,7 @@ const _0_001: Array = [
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "Don't rush to be dispointed on this, this level is not everything"
+		text = "Don't rush to be disappointed on this, this level is not everything"
 	},
 	{
 		speaker = "Developer: ",
@@ -190,17 +205,17 @@ const _1_001: Array = [
 	{
 		speaker = "Raingo's Friend: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Help my friend! He is traped by fire!"
+		text = "Help my friend! He is trapped by fire!"
 	},
 	{
 		speaker = "Police 1: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Too many causities caused by this Meteorite"
+		text = "Too many causalities caused by this Meteorite"
 	},
 	{
 		speaker = "Police 2: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "We cover you to safe place, we will help your firend!"
+		text = "We cover you to safe place, we will help your friend!"
 	},
 	{
 		speaker = "",
@@ -223,7 +238,7 @@ const _2_001: Array = [
 	{
 		speaker = "Raingo: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "I am traped by fire"
+		text = "I am trapped by fire"
 	},
 	{
 		speaker = "Raingo: ",
@@ -341,7 +356,7 @@ const _2_002: Array = [
 	{
 		speaker = "Friend: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Haha, just dont' worry about this..."
+		text = "Haha, just don't' worry about this..."
 	},
 	{
 		speaker = "Friend: ",
@@ -448,7 +463,7 @@ const _REAL_ENDING: Array = [
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "System... shuting down on..."
+		text = "System... shutting down on..."
 	},
 	{
 		speaker = "System: ",
