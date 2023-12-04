@@ -83,5 +83,5 @@ func _drawTargetDirection() -> void:
 			offScreenReticle.rotation = offScreenTargetDirection
 	
 
-# func _updateCanShowTargetMark(newValue: bool) -> void:
-# 	canShowTargetMark = newValue
+func setCanShowTargetMark(toggle: bool) -> void:
+	canShowTargetMark = toggle
