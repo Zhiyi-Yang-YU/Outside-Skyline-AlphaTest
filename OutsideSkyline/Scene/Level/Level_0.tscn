@@ -214,7 +214,6 @@ shadow_enabled = true
 
 [node name="MrBlue" parent="GameLevel/RealityLevel" instance=ExtResource("11_n4bsk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
-isInteractable = false
 
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("8_3plam")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0195498, 99.9999, 0.0116997)

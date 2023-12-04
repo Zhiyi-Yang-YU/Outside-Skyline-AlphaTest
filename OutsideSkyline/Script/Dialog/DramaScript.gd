@@ -353,10 +353,29 @@ const _2_002: Array = [
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Wow! They say wishing on a shooting star..."
 	},
+	{
+		speaker = "???: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "He's lost conscious... Do something..."
+	},
 ]
 
 const _2_003: Array = [
-	
+	{
+		speaker = "HelloWorld Follower: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Hello, my friend"
+	},
+	{
+		speaker = "HW Follower: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "May relativity and quantum mechanics bless you"
+	},
+	{
+		speaker = "HW Follower: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Our "
+	},
 ]
 
 const _FAKE_ENDING: Array = [
