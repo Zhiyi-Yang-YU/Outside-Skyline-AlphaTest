@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://u7s4agy2nas2"]
+[gd_scene load_steps=19 format=3 uid="uid://u7s4agy2nas2"]
 
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level.gd" id="1_qyphs"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameplayUI_Manager.gd" id="2_vopqo"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://dg65ghdam80a0" path="res://OutsideSkyline/Scene/Level/Level_2_Memory.tscn" id="6_8bw7k"]
 [ext_resource type="PackedScene" uid="uid://dnclc8ynt3oi1" path="res://OutsideSkyline/Scene/Level/Level_2_Reality.tscn" id="7_vvjfk"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="8_bu0uo"]
+[ext_resource type="PackedScene" uid="uid://y4yp1mnu8484" path="res://OutsideSkyline/Scene/Character/HelloWorldReligion.tscn" id="9_amnd0"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="9_mhfdn"]
+[ext_resource type="PackedScene" uid="uid://cx13y3npbmx4m" path="res://OutsideSkyline/Scene/UI/targetMark_location.tscn" id="10_t37m3"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level_2.gd" id="10_w0e77"]
+[ext_resource type="PackedScene" uid="uid://ddnwkxpc1ugid" path="res://OutsideSkyline/Scene/Character/Friend.tscn" id="11_caykx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
 font = ExtResource("4_p1u8v")
@@ -210,18 +213,35 @@ shadow_enabled = true
 
 [node name="RealityLevel" parent="GameLevel" instance=ExtResource("7_vvjfk")]
 
+[node name="TargetMark_E9" parent="GameLevel/RealityLevel" instance=ExtResource("10_t37m3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31243, 2.08165e-12, -215.954)
+
 [node name="MemoryLevel" parent="GameLevel" instance=ExtResource("6_8bw7k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
-visible = false
+
+[node name="Friend" parent="GameLevel/MemoryLevel" instance=ExtResource("11_caykx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -62.2599)
+
+[node name="HelloWorldFollower" parent="GameLevel/MemoryLevel" instance=ExtResource("9_amnd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29896, 0, -115.407)
+
+[node name="TargetMark_E5" parent="GameLevel/MemoryLevel" instance=ExtResource("10_t37m3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -192.162)
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("8_bu0uo")
 
+[node name="Level2_Component" type="Node3D" parent="." node_paths=PackedStringArray("player", "friend", "helloWorldFollower", "targetMark_event5", "targetMark_event9")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+script = ExtResource("10_w0e77")
+player = NodePath("../Player")
+friend = NodePath("../GameLevel/MemoryLevel/Friend")
+helloWorldFollower = NodePath("../GameLevel/MemoryLevel/HelloWorldFollower")
+targetMark_event5 = NodePath("../GameLevel/MemoryLevel/TargetMark_E5")
+targetMark_event9 = NodePath("../GameLevel/RealityLevel/TargetMark_E9")
+
 [node name="Player" parent="." instance=ExtResource("9_mhfdn")]
 canSwitchReality = false
-
-[node name="Level2_Component" type="Node3D" parent="."]
-script = ExtResource("10_w0e77")
 
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]

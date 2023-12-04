@@ -2,10 +2,10 @@ extends Node
 
 
 const _TEST_MESSAGE: Array = [
-	{speaker = "Developer: ", speakerCamp = DialogBox.NEUTRAL, text = "Testing message 1A1A1A1"},
+	{speaker = "Developer: ", speakerCamp = DialogBox.FRIENDLY, text = "Testing message 1A1A1A1"},
 	{speaker = "Developer: ", speakerCamp = DialogBox.NEUTRAL, text = "Testing message 2B2B2B2"},
-	{speaker = "Developer: ", speakerCamp = DialogBox.NEUTRAL, text = "Testing message 3C3C3C3"},
-	{speaker = "Developer: ", speakerCamp = DialogBox.NEUTRAL, text = "Testing message 4D4D4D4"},
+	{speaker = "Developer: ", speakerCamp = DialogBox.ENEMY, text = "Testing message 3C3C3C3"},
+	{speaker = "Developer: ", speakerCamp = DialogBox.SYSTEM, text = "Testing message 4D4D4D4"},
 ]
 
 const _0_001: Array = [

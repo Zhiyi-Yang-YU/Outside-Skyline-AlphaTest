@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://y4yp1mnu8484"]
+
+[ext_resource type="Script" path="res://OutsideSkyline/Script/Character/NPC.gd" id="1_vxw7f"]
+[ext_resource type="Material" uid="uid://d0wtslghyf6f0" path="res://Assets/Material/Texture_GREEN.tres" id="2_y1xq4"]
+[ext_resource type="FontFile" uid="uid://sklftt7ai8dk" path="res://Assets/Font/JetBrainsMono-Regular.ttf" id="3_f0qdc"]
+[ext_resource type="PackedScene" uid="uid://b3fgywjemgv2i" path="res://OutsideSkyline/Scene/UI/targetMark_itemnpc.tscn" id="4_5iaon"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_daxel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_42di8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wcjrv"]
+radius = 3.0
+
+[node name="HelloWorldFollower" type="Node3D" groups=["PlayerGroup"]]
+process_mode = 1
+script = ExtResource("1_vxw7f")
+npcName = "\"HelloWorld\"Follower"
+
+[node name="VisualNode" type="Node3D" parent="."]
+
+[node name="Body" type="Node3D" parent="VisualNode"]
+
+[node name="BodyMesh" type="MeshInstance3D" parent="VisualNode/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("2_y1xq4")
+mesh = SubResource("CapsuleMesh_daxel")
+skeleton = NodePath("../..")
+
+[node name="NPCNameLabel" type="Label3D" parent="VisualNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+text = "\"HelloWorld\" Follower"
+font = ExtResource("3_f0qdc")
+font_size = 50
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="Stand_CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_42di8")
+
+[node name="CanInteractArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanInteractArea"]
+shape = SubResource("SphereShape3D_wcjrv")
+
+[node name="TargetMark_itemnpc" parent="." node_paths=PackedStringArray("obj") instance=ExtResource("4_5iaon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+obj = NodePath("..")
+
+[connection signal="body_entered" from="CanInteractArea" to="." method="_on_can_interact_area_body_entered"]
+[connection signal="body_exited" from="CanInteractArea" to="." method="_on_can_interact_area_body_exited"]

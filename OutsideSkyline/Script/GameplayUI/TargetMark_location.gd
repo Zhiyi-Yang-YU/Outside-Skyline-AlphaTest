@@ -6,13 +6,13 @@ var player: CharacterBody3D
 @onready var camera: Camera3D
 
 # 目标导航标志索引
-@export var obj: Node3D
+# @export var obj: Node3D
 
 @onready var targetReticile: TextureRect = $TargetReticle
 @onready var offScreenReticle: TextureRect = $OffscreenReticle
 
 # 属性
-var canShowTargetMark: bool = true
+var canShowTargetMark: bool = false
 var isTargetCanBeSeen: bool
 
 var offScreenTargetDirection: float
@@ -26,6 +26,8 @@ const OFF_SEREEN_RETICLE_OFFSET_POSITION: Vector2 = Vector2(72, 72)
 const BORDER_OFFSET_POSITION: Vector2 = Vector2(50, 50)
 
 var localToCamera: Vector3
+
+signal SIGTargetMarkExpired
 
 
 func _ready() -> void:
@@ -43,6 +45,7 @@ func _on_quit_area_body_entered(playerNode: Node3D) -> void:
 	if not playerNode.is_in_group("Player"):
 		pass
 	else:
+		emit_signal("SIGTargetMarkExpired")
 		queue_free()
 
 
