@@ -1,9 +1,10 @@
 # Outside-Skyline-AlphaTest
+
 - DATT3300 Outside Skyline Game Milestone 2
 - Deadline: 2023/12/04
 
-
 ## Tutorial Used
+
 - [Juiced Up First Person Character Controller Tutorial - Godot 3D FPS](https://youtu.be/A3HLeyaBCq4?si=3KP-erZ-9pWVv2yH)
 - [Godot 4.X : Ultimate First Person Controller Tutorial ( 2023 )](https://youtu.be/xIKErMgJ1Yk?si=siLUjf5kRFujED6f)
 - [【Godot教程】教你用全局脚本优化代码](https://www.bilibili.com/video/BV11s4y1t7k6/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
@@ -15,8 +16,7 @@
 - [GODOT VFX - Stylized Fire Effect Tutorial](https://youtu.be/R3xMwfrlTI8?si=1inAYJ0TDuZJaspE)
 
 ## Resources Reference
-- Addons
-  - [Terrain3D](https://github.com/TokisanGames/Terrain3D.git)
+
 - Texture
   - [Greybox Texture](https://github.com/lukky-nl/FPS-controller-assets)
   - [Crosshair Pack](https://www.kenney.nl/assets/crosshair-pack)
@@ -34,6 +34,6 @@
   - [燃烧 #01 着火 火焰 环境音 音效 (HQ)](https://www.bilibili.com/video/BV1jL4y1P7uB/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
   
 ## Creative Idea Reference
-  - [【基德】困扰人类2万年的难题：全息宇宙理论](https://www.bilibili.com/video/BV1RL411M7ZS/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
-  - [Maldacena, J. The Large-N Limit of Superconformal Field Theories and Supergravity. International Journal of Theoretical Physics 38, 1113–1133 (1999). ](https://doi.org/10.1023/A:1026654312961)
 
+- [【基德】困扰人类2万年的难题：全息宇宙理论](https://www.bilibili.com/video/BV1RL411M7ZS/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
+- [Maldacena, J. The Large-N Limit of Superconformal Field Theories and Supergravity. International Journal of Theoretical Physics 38, 1113–1133 (1999).](https://doi.org/10.1023/A:1026654312961)

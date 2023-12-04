@@ -31,10 +31,6 @@ window/size/viewport_height=1080
 
 project/assembly_name="Outside-Skyline"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
-
 [input]
 
 ui_moveForward={
