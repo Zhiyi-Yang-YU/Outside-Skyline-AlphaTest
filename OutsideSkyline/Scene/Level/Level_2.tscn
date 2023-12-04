@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://u7s4agy2nas2"]
+[gd_scene load_steps=16 format=3 uid="uid://u7s4agy2nas2"]
 
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level.gd" id="1_qyphs"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameplayUI_Manager.gd" id="2_vopqo"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dnclc8ynt3oi1" path="res://OutsideSkyline/Scene/Level/Level_2_Reality.tscn" id="7_vvjfk"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="8_bu0uo"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="9_mhfdn"]
+[ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level_2.gd" id="10_w0e77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
 font = ExtResource("4_p1u8v")
@@ -217,8 +218,10 @@ visible = false
 script = ExtResource("8_bu0uo")
 
 [node name="Player" parent="." instance=ExtResource("9_mhfdn")]
+canSwitchReality = false
 
-[node name="Level0_Component" type="Node3D" parent="."]
+[node name="Level2_Component" type="Node3D" parent="."]
+script = ExtResource("10_w0e77")
 
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]

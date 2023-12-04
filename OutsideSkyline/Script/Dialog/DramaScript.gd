@@ -188,15 +188,96 @@ const _1_001: Array = [
 		text = "(Explosion)"
 	},
 	{
-		speaker = "Woodenball Island Civilians: ",
+		speaker = "Civilians: ",
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "(Screaming)"
 	},
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "You weaked up"
+		text = "WASD to move, SpaceBar to jump"
+	},
+	{
+		speaker = "Target: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "ESCAPE THE TOWN!"
 	},
 ]
 
 const _2_001: Array = []
+
+const _FAKE_ENDING: Array = [
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Finally, you escaped"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Do you really think so?"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "You sure you don't want to know..."
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "...what is behind the wall?"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Always remember the name of game:"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "OUTSIDE SKYLINE"
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "You just unlock the Fake Ending"
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Real Ending is not done yet, waiting for final result"
+	},
+]
+
+const _REAL_ENDING: Array = [
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Congratulations! You escaped!"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "FOR REAL!"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Not only the town!"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "You...escaped from this game!"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "System... shuting down on..."
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "3...2...1..."
+	},
+]

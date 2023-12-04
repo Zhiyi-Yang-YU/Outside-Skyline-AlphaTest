@@ -91,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.216857, 0)
 material_override = SubResource("ShaderMaterial_do37d")
 amount = 20
 lifetime = 1.2
-fixed_fps = 60
+fixed_fps = 25
 process_material = SubResource("ParticleProcessMaterial_ga0wc")
 draw_pass_1 = SubResource("QuadMesh_xu6a5")
 
@@ -100,7 +100,7 @@ sorting_offset = -1.0
 material_override = SubResource("ShaderMaterial_do37d")
 amount = 20
 lifetime = 1.5
-fixed_fps = 60
+fixed_fps = 25
 process_material = SubResource("ParticleProcessMaterial_cnay6")
 draw_pass_1 = SubResource("QuadMesh_xu6a5")
 
