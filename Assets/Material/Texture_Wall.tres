@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://4xn3fvx3tox6"]
+
+[ext_resource type="Texture2D" uid="uid://hcq3nqe6ko0j" path="res://Assets/Texture/Block/brick_wall_006_diff_1k.jpg" id="1_k7krf"]
+
+[resource]
+albedo_texture = ExtResource("1_k7krf")

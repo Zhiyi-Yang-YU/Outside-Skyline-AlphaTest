@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://kkjr444b4arg"]
+
+[ext_resource type="Texture2D" uid="uid://c70isvycq13st" path="res://Assets/Texture/Block/aerial_grass_rock_diff_1k.jpg" id="1_6hy2k"]
+
+[resource]
+albedo_texture = ExtResource("1_6hy2k")

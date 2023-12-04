@@ -1,16 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://u7s4agy2nas2"]
+[gd_scene load_steps=15 format=3 uid="uid://u7s4agy2nas2"]
 
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level.gd" id="1_qyphs"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameplayUI_Manager.gd" id="2_vopqo"]
 [ext_resource type="PackedScene" uid="uid://bidjwydp3xerk" path="res://OutsideSkyline/Scene/UI/control_crosshair.tscn" id="3_vbkid"]
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://Assets/Font/JetBrainsMono-Bold.ttf" id="4_p1u8v"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://Assets/Font/JetBrainsMono-Medium.ttf" id="5_wb67f"]
-[ext_resource type="PackedScene" uid="uid://drtgx6x6bknrx" path="res://OutsideSkyline/Scene/Level/Basic_Level_Reality.tscn" id="6_6ooru"]
-[ext_resource type="PackedScene" uid="uid://5sguweeqt816" path="res://OutsideSkyline/Scene/Level/Basic_Level_Memory.tscn" id="7_win50"]
+[ext_resource type="PackedScene" uid="uid://dg65ghdam80a0" path="res://OutsideSkyline/Scene/Level/Level_2_Memory.tscn" id="6_8bw7k"]
+[ext_resource type="PackedScene" uid="uid://dnclc8ynt3oi1" path="res://OutsideSkyline/Scene/Level/Level_2_Reality.tscn" id="7_vvjfk"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="8_bu0uo"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="9_mhfdn"]
-[ext_resource type="PackedScene" uid="uid://blcttmk3qb230" path="res://OutsideSkyline/Scene/Character/MrBlue.tscn" id="10_rolco"]
-[ext_resource type="Script" path="res://OutsideSkyline/Script/Level/Level_0.gd" id="11_t7555"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r3r2"]
 font = ExtResource("4_p1u8v")
@@ -209,23 +207,18 @@ shadow_enabled = true
 
 [node name="GameLevel" type="Node3D" parent="."]
 
-[node name="RealityLevel" parent="GameLevel" instance=ExtResource("6_6ooru")]
+[node name="RealityLevel" parent="GameLevel" instance=ExtResource("7_vvjfk")]
 
-[node name="MemoryLevel" parent="GameLevel" instance=ExtResource("7_win50")]
+[node name="MemoryLevel" parent="GameLevel" instance=ExtResource("6_8bw7k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+visible = false
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("8_bu0uo")
 
 [node name="Player" parent="." instance=ExtResource("9_mhfdn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
-canSwitchReality = false
-
-[node name="MrBlue" parent="." instance=ExtResource("10_rolco")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
 
 [node name="Level0_Component" type="Node3D" parent="."]
-script = ExtResource("11_t7555")
 
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]

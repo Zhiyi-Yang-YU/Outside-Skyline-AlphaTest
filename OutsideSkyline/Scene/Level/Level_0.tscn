@@ -232,6 +232,7 @@ isInteractable = false
 
 [node name="MrBlue" parent="GameLevel/RealityLevel" instance=ExtResource("11_n4bsk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14.0668)
+isInteractable = false
 
 [node name="FireVFX" parent="GameLevel/RealityLevel" instance=ExtResource("11_jwi7g")]
 transform = Transform3D(2.4, 0, 0, 0, 1, 0, 0, 0, 2.7, 13.1824, 1.88605, 6.1465)

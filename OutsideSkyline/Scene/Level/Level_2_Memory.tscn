@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg65ghdam80a0"]
+
+[ext_resource type="PackedScene" uid="uid://c0inm2y1e5s3n" path="res://OutsideSkyline/Scene/Level/Level_2_BaseStructure.tscn" id="1_p30kf"]
+
+[node name="MemoryLevel" type="Node3D"]
+
+[node name="Base2" parent="." instance=ExtResource("1_p30kf")]

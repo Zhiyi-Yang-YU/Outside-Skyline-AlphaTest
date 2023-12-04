@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cqpyd2dqdqs8u"]
 
+[ext_resource type="Material" uid="uid://kkjr444b4arg" path="res://Assets/Material/Texture_Grassland.tres" id="1_5gjkl"]
 [ext_resource type="Material" uid="uid://ctvb3o1t8t1o5" path="res://Assets/Material/DemoTexture_GreyTilemap.tres" id="1_6hao4"]
 [ext_resource type="PackedScene" uid="uid://cts10lj2psorw" path="res://OutsideSkyline/Scene/props/Roads/road_straight.tscn" id="2_envvs"]
 [ext_resource type="PackedScene" uid="uid://bxm32q07unv1b" path="res://OutsideSkyline/Scene/props/House/house_type_01.tscn" id="3_x6yei"]
-[ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="4_qf5xh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ts4ov"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -28,9 +28,23 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 [node name="Floor" type="CSGBox3D" parent="VisualNode/Ground"]
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.503913, 0)
-material_override = ExtResource("1_6hao4")
+material_override = ExtResource("1_5gjkl")
 use_collision = true
-size = Vector3(100, 1, 500)
+size = Vector3(100, 1, 200)
+
+[node name="Floor2" type="CSGBox3D" parent="VisualNode/Ground"]
+process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.504, 200)
+material_override = ExtResource("1_5gjkl")
+use_collision = true
+size = Vector3(100, 1, 200)
+
+[node name="Floor3" type="CSGBox3D" parent="VisualNode/Ground"]
+process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.504, -200)
+material_override = ExtResource("1_5gjkl")
+use_collision = true
+size = Vector3(100, 1, 200)
 
 [node name="Wall_+Z" type="CSGBox3D" parent="VisualNode/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 17)
@@ -94,8 +108,6 @@ transform = Transform3D(-1, -7.64274e-15, -8.74228e-08, 0, 1, -8.74228e-08, 8.74
 [node name="house_type14" parent="VisualNode/House" instance=ExtResource("3_x6yei")]
 transform = Transform3D(-1, -7.64274e-15, -8.74228e-08, 0, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -13.8885, 0, 10.84)
 
-[node name="Props" type="Node3D" parent="VisualNode"]
-
 [node name="Setting" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Setting"]
@@ -104,5 +116,3 @@ environment = SubResource("Environment_iodri")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Setting"]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
-
-[node name="Player" parent="." instance=ExtResource("4_qf5xh")]

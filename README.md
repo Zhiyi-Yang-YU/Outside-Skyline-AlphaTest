@@ -30,6 +30,8 @@
   - [Greybox Texture](https://github.com/lukky-nl/FPS-controller-assets)
   - [Crosshair Pack](https://www.kenney.nl/assets/crosshair-pack)
   - [Fire Texture](https://www.patreon.com/posts/godot-vfx-fire-90253805)
+  - [material_wall](https://polyhaven.com/a/brick_wall_006)
+  - [Aerial Grass Rock](https://polyhaven.com/a/aerial_grass_rock)
 - Models
   - [Car Kit](https://www.kenney.nl/assets/car-kit)
   - [City Kit (Suburban)](https://www.kenney.nl/assets/city-kit-suburban)
@@ -38,3 +40,4 @@
 - Sound
   - [通用警笛音效-终极合集-视频编辑制作-Police Siren - Ultimate Collections _ Sound effects](https://www.bilibili.com/video/BV1KW41137KX/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
   - [【绿幕素材】直升机旋转视频素材，带音效，无水印](https://www.bilibili.com/video/BV1xL4y1N7Zs/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
+  - [燃烧 #01 着火 火焰 环境音 音效 (HQ)](https://www.bilibili.com/video/BV1jL4y1P7uB/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)

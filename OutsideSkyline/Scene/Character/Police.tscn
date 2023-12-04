@@ -28,7 +28,8 @@ npcName = "Police"
 
 [node name="NPCNameLabel" type="Label3D" parent="VisualNode"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
-text = "Mr.Blue"
+text = "Police
+"
 font = ExtResource("3_w1yiv")
 font_size = 50
 
