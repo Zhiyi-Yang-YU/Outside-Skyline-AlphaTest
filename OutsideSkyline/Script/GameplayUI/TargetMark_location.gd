@@ -4,10 +4,6 @@ var player: CharacterBody3D
 
 # 摄像机
 @onready var camera: Camera3D
-
-# 目标导航标志索引
-# @export var obj: Node3D
-
 @onready var targetReticile: TextureRect = $TargetReticle
 @onready var offScreenReticle: TextureRect = $OffscreenReticle
 

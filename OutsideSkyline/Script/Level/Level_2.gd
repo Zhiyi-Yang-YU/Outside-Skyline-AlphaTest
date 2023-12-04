@@ -22,9 +22,11 @@ var _is_event_10_done: bool = false
 
 func _ready() -> void:
 	player.canSwitchReality = false
+
 	DialogBox.SIGDialogFinish.connect(_eventNumCountUp)
 	targetMark_event5.SIGTargetMarkExpired.connect(_eventNumCountUp)
 	targetMark_event9.SIGTargetMarkExpired.connect(_eventNumCountUp)
+
 	_eventList(0)
 
 
@@ -36,7 +38,7 @@ func _eventList(event_index: int) -> void:
 	match event_index:
 		# 第一阶段：先进入回忆状态再说
 		0:
-			DialogBox._showDialogBox(DramaScript._TEST_MESSAGE)
+			DialogBox._showDialogBox(DramaScript._2_001)
 
 			_is_event_01_done = true
 
@@ -60,7 +62,7 @@ func _eventList(event_index: int) -> void:
 		# 第二阶段：回忆状态和NPC对话
 		3:
 			if Input.is_action_pressed("ui_interact") and friend.canInteractNow:
-				DialogBox._showDialogBox(DramaScript._TEST_MESSAGE)
+				DialogBox._showDialogBox(DramaScript._2_002)
 				friend.isInteractable = false
 				friend.setAsTarget(false)
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b665s4crcqyck"
-path="res://.godot/imported/sedanSports.glb-4f35915a70abbe256fc4907dca107705.scn"
+path="res://.godot/imported/sedanSports.glb-2a8dba9838eb273e1a7c3b6f0bd52fa9.scn"
 
 [deps]
 
-source_file="res://Assets/Model/Kenney_Car_Kit/sedanSports.glb"
-dest_files=["res://.godot/imported/sedanSports.glb-4f35915a70abbe256fc4907dca107705.scn"]
+source_file="res://Assets/Model/Kenney_Car_kit/sedanSports.glb"
+dest_files=["res://.godot/imported/sedanSports.glb-2a8dba9838eb273e1a7c3b6f0bd52fa9.scn"]
 
 [params]
 

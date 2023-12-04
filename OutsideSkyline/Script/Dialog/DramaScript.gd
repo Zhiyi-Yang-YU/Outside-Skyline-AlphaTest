@@ -75,26 +75,6 @@ const _0_002: Array = [
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Yes, Developer refers to the Call of Duty 19 Style Subtitle"
 	},
-	# {
-	# 	speaker = "Mr.Blue: ",
-	# 	speakerCamp = DialogBox.ENEMY,
-	# 	text = "When speaker is red, enemies are speaking"
-	# },
-	# {
-	# 	speaker = "Mr.Blue: ",
-	# 	speakerCamp = DialogBox.ENEMY,
-	# 	text = "Don't attack me, this is only a demo, and maybe there is no enemy in this game"
-	# },
-	# {
-	# 	speaker = "Mr.Blue: ",
-	# 	speakerCamp = DialogBox.FRIENDLY,
-	# 	text = "When speaker is blue, friendlys are speaking"
-	# },
-	# {
-	# 	speaker = "Mr.Blue: ",
-	# 	speakerCamp = DialogBox.NEUTRAL,
-	# 	text = "When speaker is yellow,the speaker belongs to neutral camps"
-	# },
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
@@ -118,22 +98,22 @@ const _0_002: Array = [
 
 const _1_001: Array = [
 	{
-		speaker = "Raingo: ",
+		speaker = "Raingo's Friend: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Hey! Look at this! It's a shooting star!"
 	},
 	{
-		speaker = "Raingo's Friend: ",
+		speaker = "Raingo: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Wow! They say wishing on a shooting star..."
 	},
 	{
-		speaker = "Raingo's Friend: ",
+		speaker = "Raingo: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "...can make your wish come true!"
 	},
 	{
-		speaker = "Raingo: ",
+		speaker = "Raingo's Friend: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Make a wish!"
 	},
@@ -160,7 +140,7 @@ const _1_001: Array = [
 	{
 		speaker = "Raingo: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Wait! Do you think..."
+		text = "Wait, Do you think..."
 	},
 	{
 		speaker = "Raingo: ",
@@ -193,9 +173,44 @@ const _1_001: Array = [
 		text = "(Screaming)"
 	},
 	{
+		speaker = "",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = ""
+	},
+	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
 		text = "WASD to move, SpaceBar to jump"
+	},
+	{
+		speaker = "",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = ""
+	},
+	{
+		speaker = "Raingo's Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Help my friend! He is traped by fire!"
+	},
+	{
+		speaker = "Police 1: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Too many causities caused by this Meteorite"
+	},
+	{
+		speaker = "Police 2: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "We cover you to safe place, we will help your firend!"
+	},
+	{
+		speaker = "",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = ""
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Now get up!!!"
 	},
 	{
 		speaker = "Target: ",
@@ -204,7 +219,145 @@ const _1_001: Array = [
 	},
 ]
 
-const _2_001: Array = []
+const _2_001: Array = [
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I am traped by fire"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "HELLLLLLLLP!!!"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "How can it ..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I should know it!"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I should know it!!!"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Losing my mind..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "That's REAL!!!"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Press \"Q\" to recall"
+	},
+]
+
+const _2_002: Array = [
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "You looks so nervous recently"
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Still worry about the crazy..."
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "...HelloWorld Religion stuff?"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Dude! They really scared me!"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "They talks about something..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "...like Juna Maldacena"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "The nature of the universe is a holographic projection..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Anti-de Sitter/Conformal Field Theory correspondence..."
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Was that a spell?"
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I recognize every word, but I just can't understand what you're saying"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Does't matter...It just..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "...just makes me feel like we are in a video game!"
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Sounds like maybe you could go run into a wall."
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Platform Nine and Three-Quarters, you know, haha"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Don't laugh at me..."
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Haha, just dont' worry about this..."
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "...hey! Look at this! It's a shooting star!"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Wow! They say wishing on a shooting star..."
+	},
+]
+
+const _2_003: Array = [
+	
+]
 
 const _FAKE_ENDING: Array = [
 	{
@@ -222,10 +375,11 @@ const _FAKE_ENDING: Array = [
 		speakerCamp = DialogBox.SYSTEM,
 		text = "You sure you don't want to know..."
 	},
+	# 记得删
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "...what is behind the wall?"
+		text = "...what is behind the wall?(Indeed nothing now, add in final)"
 	},
 	{
 		speaker = "System: ",
@@ -237,11 +391,13 @@ const _FAKE_ENDING: Array = [
 		speakerCamp = DialogBox.SYSTEM,
 		text = "OUTSIDE SKYLINE"
 	},
+	# 记得删
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "You just unlock the Fake Ending"
 	},
+	# 记得删
 	{
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.NEUTRAL,
@@ -268,7 +424,7 @@ const _REAL_ENDING: Array = [
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "You...escaped from this game!"
+		text = "You...escaped from the...Game!"
 	},
 	{
 		speaker = "System: ",

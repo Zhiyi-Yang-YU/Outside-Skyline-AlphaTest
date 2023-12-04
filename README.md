@@ -3,13 +3,14 @@
 - Deadline: 2023/12/04
 
 ## TODO
-- 关卡和剧情设计
+- 设计剧本
 
 ## DONE
 - NPC
 - 对话系统
 - 关卡事件流程
 - 目标指引
+- 关卡设计
 
 ## Tutorial Used
 - [Juiced Up First Person Character Controller Tutorial - Godot 3D FPS](https://youtu.be/A3HLeyaBCq4?si=3KP-erZ-9pWVv2yH)
