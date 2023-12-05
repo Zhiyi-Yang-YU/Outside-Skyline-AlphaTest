@@ -86,7 +86,7 @@ func _eventList(event_index: int) -> void:
 			_is_event_06_done = true
 
 		6:
-			DialogBox._showDialogBox(DramaScript._TEST_MESSAGE)
+			DialogBox._showDialogBox(DramaScript._2_004)
 
 			_is_event_06_done = false
 			_is_event_07_done = true

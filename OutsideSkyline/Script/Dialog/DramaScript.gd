@@ -225,12 +225,12 @@ const _1_001: Array = [
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "Now get up!!!"
+		text = "You are trapped by fire"
 	},
 	{
 		speaker = "Target: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "ESCAPE THE TOWN!"
+		text = "Wake Up Now!"
 	},
 ]
 
@@ -373,6 +373,11 @@ const _2_002: Array = [
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "He's lost conscious... Do something..."
 	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Press \"Q\" to recall"
+	},
 ]
 
 const _2_003: Array = [
@@ -389,7 +394,73 @@ const _2_003: Array = [
 	{
 		speaker = "HW Follower: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "Our "
+		text = "Do you remember our latest Bible?"
+	},
+	{
+		speaker = "HW Follower: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Do you remember our latest Bible?"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "You mean the..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "The Large..."
+	},
+	{
+		speaker = "HW Follower: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "The Large-N Limit of Superconformal Field Theories and Supergravity"
+	},
+	{
+		speaker = "HW Follower: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Chech it out, at \"https://doi.org/10.1023/A:1026654312961\""
+	},
+	{
+		speaker = "???: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Do we have fire suits and... masks? We're going in!"
+	},
+]
+
+const _2_004: Array = [
+	{
+		speaker = "???: ",
+		speakerCamp = DialogBox.NEUTRAL,
+		text = "Hey! Wake Up! Wake Up!"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Press \"Q\" again to back to reality"
+	},
+]
+
+const _2_005: Array = [
+	{
+		speaker = "Police: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Oh! He made it!"
+	},
+	{
+		speaker = "Police: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Don't worry, you are safe now"
+	},
+	{
+		speaker = "Police: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Get in the helicopter, we take you out of there"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Press \"Q\" again to back to reality"
 	},
 ]
 
