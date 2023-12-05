@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ddjji07hrpoog"
-path="res://.godot/imported/firetruck.glb-0f17761218ca402ccb1f90382961cc7e.scn"
+path="res://.godot/imported/firetruck.glb-c652a53ecd6ff216ce8072c7734e4357.scn"
 
 [deps]
 
-source_file="res://Assets/Model/Kenney_Car_kit/firetruck.glb"
-dest_files=["res://.godot/imported/firetruck.glb-0f17761218ca402ccb1f90382961cc7e.scn"]
+source_file="res://Assets/Model/Kenney_Car_Kit/firetruck.glb"
+dest_files=["res://.godot/imported/firetruck.glb-c652a53ecd6ff216ce8072c7734e4357.scn"]
 
 [params]
 

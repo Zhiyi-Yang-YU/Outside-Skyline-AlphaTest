@@ -42,6 +42,9 @@ script = ExtResource("1_my4ed")
 realityScene = NodePath("GameLevel/RealityLevel")
 memoryScene = NodePath("GameLevel/MemoryLevel")
 
+[node name="Level0_Component" type="Node3D" parent="."]
+script = ExtResource("12_wu6cc")
+
 [node name="UI" type="Node3D" parent="." groups=["UI"]]
 script = ExtResource("2_tt6jw")
 
@@ -223,9 +226,6 @@ script = ExtResource("9_2enm1")
 
 [node name="Player" parent="." instance=ExtResource("10_2vfgd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
-
-[node name="Level0_Component" type="Node3D" parent="."]
-script = ExtResource("12_wu6cc")
 
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameContinueButton" to="GameManager" method="_on_game_continue_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]

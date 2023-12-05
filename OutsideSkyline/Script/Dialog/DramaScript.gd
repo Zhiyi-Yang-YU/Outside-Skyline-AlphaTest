@@ -373,11 +373,6 @@ const _2_002: Array = [
 		speakerCamp = DialogBox.NEUTRAL,
 		text = "He's lost conscious... Do something..."
 	},
-	{
-		speaker = "System: ",
-		speakerCamp = DialogBox.SYSTEM,
-		text = "Press \"Q\" to recall"
-	},
 ]
 
 const _2_003: Array = [
@@ -394,12 +389,7 @@ const _2_003: Array = [
 	{
 		speaker = "HW Follower: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "Do you remember our latest Bible?"
-	},
-	{
-		speaker = "HW Follower: ",
-		speakerCamp = DialogBox.NEUTRAL,
-		text = "Do you remember our latest Bible?"
+		text = "Do you remember our Bible?"
 	},
 	{
 		speaker = "Raingo: ",
@@ -443,24 +433,70 @@ const _2_004: Array = [
 
 const _2_005: Array = [
 	{
-		speaker = "Police: ",
+		speaker = "Police 1: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Oh! He made it!"
 	},
 	{
-		speaker = "Police: ",
+		speaker = "Police 2: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Don't worry, you are safe now"
 	},
 	{
-		speaker = "Police: ",
+		speaker = "Police 1: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Get in the helicopter, we take you out of there"
 	},
 	{
+		speaker = "Target: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Get in helicopter"
+	},
+]
+
+const _3_001: Array = [
+	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "Press \"Q\" again to back to reality"
+		text = "You just get through a wall"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "You never know this wall can be get through"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "This cause a bug which makes you into the server of this game"
+	},
+	{
+		speaker = "Target: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Turn off to escape from the game"
+	},
+]
+
+const _3_002: Array = [
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I cannot believe that..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I really live in a video game..."
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I am tired of this, Let me go"
+	},
+	{
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "Deleting Save file..."
 	},
 ]
 
@@ -475,17 +511,18 @@ const _FAKE_ENDING: Array = [
 		speakerCamp = DialogBox.SYSTEM,
 		text = "Do you really think so?"
 	},
+	# 记得删
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
 		text = "You sure you don't want to know..."
 	},
-	# 记得删
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "...what is behind the wall?(Indeed nothing now, add in final)"
+		text = "...what is behind the wall?(this line will be delete in final)"
 	},
+	# 记得删
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
@@ -496,17 +533,10 @@ const _FAKE_ENDING: Array = [
 		speakerCamp = DialogBox.SYSTEM,
 		text = "OUTSIDE SKYLINE"
 	},
-	# 记得删
 	{
-		speaker = "Developer: ",
-		speakerCamp = DialogBox.NEUTRAL,
-		text = "You just unlock the Fake Ending"
-	},
-	# 记得删
-	{
-		speaker = "Developer: ",
-		speakerCamp = DialogBox.NEUTRAL,
-		text = "Real Ending is not done yet, waiting for final result"
+		speaker = "System: ",
+		speakerCamp = DialogBox.SYSTEM,
+		text = "...and, you can always press \"P\" to exit game"
 	},
 ]
 
@@ -514,7 +544,7 @@ const _REAL_ENDING: Array = [
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "Congratulations! You escaped!"
+		text = "Congratulations! You success!"
 	},
 	{
 		speaker = "System: ",

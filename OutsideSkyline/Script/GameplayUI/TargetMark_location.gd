@@ -8,7 +8,7 @@ var player: CharacterBody3D
 @onready var offScreenReticle: TextureRect = $OffscreenReticle
 
 # 属性
-var canShowTargetMark: bool = false
+@export var canShowTargetMark: bool = false
 var isTargetCanBeSeen: bool
 
 var offScreenTargetDirection: float

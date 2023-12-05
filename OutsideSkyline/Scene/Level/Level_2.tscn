@@ -43,6 +43,16 @@ script = ExtResource("1_qyphs")
 realityScene = NodePath("GameLevel/RealityLevel")
 memoryScene = NodePath("GameLevel/MemoryLevel")
 
+[node name="Level2_Component" type="Node3D" parent="." node_paths=PackedStringArray("player", "friend", "helloWorldFollower", "targetMark_event5", "targetMark_event9", "targetMark_toLevel3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+script = ExtResource("10_w0e77")
+player = NodePath("../Player")
+friend = NodePath("../GameLevel/MemoryLevel/Friend")
+helloWorldFollower = NodePath("../GameLevel/MemoryLevel/HelloWorldFollower")
+targetMark_event5 = NodePath("../GameLevel/MemoryLevel/TargetMark_E5")
+targetMark_event9 = NodePath("../GameLevel/RealityLevel/TargetMark_E9")
+targetMark_toLevel3 = NodePath("../GameLevel/MemoryLevel/TargetMark_toLevel3")
+
 [node name="UI" type="Node3D" parent="." groups=["UI"]]
 script = ExtResource("2_vopqo")
 
@@ -228,17 +238,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29896, 0, -115.407)
 [node name="TargetMark_E5" parent="GameLevel/MemoryLevel" instance=ExtResource("10_t37m3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -192.162)
 
+[node name="TargetMark_toLevel3" parent="GameLevel/MemoryLevel" instance=ExtResource("10_t37m3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0, 36.909)
+
+[node name="QuitArea" parent="GameLevel/MemoryLevel/TargetMark_toLevel3" index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, -4.44442)
+
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("8_bu0uo")
-
-[node name="Level2_Component" type="Node3D" parent="." node_paths=PackedStringArray("player", "friend", "helloWorldFollower", "targetMark_event5", "targetMark_event9")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
-script = ExtResource("10_w0e77")
-player = NodePath("../Player")
-friend = NodePath("../GameLevel/MemoryLevel/Friend")
-helloWorldFollower = NodePath("../GameLevel/MemoryLevel/HelloWorldFollower")
-targetMark_event5 = NodePath("../GameLevel/MemoryLevel/TargetMark_E5")
-targetMark_event9 = NodePath("../GameLevel/RealityLevel/TargetMark_E9")
 
 [node name="Player" parent="." instance=ExtResource("9_mhfdn")]
 canSwitchReality = false
@@ -247,3 +254,5 @@ canSwitchReality = false
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameHow2playButton" to="GameManager" method="_on_game_how_2_play_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameOptionButton" to="GameManager" method="_on_game_option_button_button_up"]
 [connection signal="button_up" from="UI/Control_GameMenuUI/GamePause/GameExitButton" to="GameManager" method="_on_game_exit_button_button_up"]
+
+[editable path="GameLevel/MemoryLevel/TargetMark_toLevel3"]

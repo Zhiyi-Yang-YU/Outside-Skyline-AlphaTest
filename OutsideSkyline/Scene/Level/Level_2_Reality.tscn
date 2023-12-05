@@ -11,7 +11,6 @@
 [node name="RealityLevel" type="Node3D"]
 
 [node name="Base2" parent="." instance=ExtResource("1_32r54")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
 
 [node name="StartRegion" type="Node3D" parent="."]
 
@@ -43,6 +42,7 @@ use_collision = true
 size = Vector3(8, 3.8, 2.5)
 
 [node name="Fire" type="Node3D" parent="StartRegion"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Fire1" type="Node3D" parent="StartRegion/Fire"]
 
@@ -115,85 +115,26 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.2
 [node name="FireVFX5" parent="StartRegion/Fire/Fire4" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
-[node name="Fire2" type="Node3D" parent="StartRegion"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20841, 0)
-
-[node name="Fire1" type="Node3D" parent="StartRegion/Fire2"]
-
-[node name="FireVFX" parent="StartRegion/Fire2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="StartRegion/Fire2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="StartRegion/Fire2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="StartRegion/Fire2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="StartRegion/Fire2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire2" type="Node3D" parent="StartRegion/Fire2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="FireVFX" parent="StartRegion/Fire2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="StartRegion/Fire2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="StartRegion/Fire2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="StartRegion/Fire2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="StartRegion/Fire2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire3" type="Node3D" parent="StartRegion/Fire2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
-[node name="FireVFX" parent="StartRegion/Fire2/Fire3" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="StartRegion/Fire2/Fire3" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="StartRegion/Fire2/Fire3" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="StartRegion/Fire2/Fire3" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="StartRegion/Fire2/Fire3" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire4" type="Node3D" parent="StartRegion/Fire2"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="FireVFX" parent="StartRegion/Fire2/Fire4" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="StartRegion/Fire2/Fire4" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="StartRegion/Fire2/Fire4" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="StartRegion/Fire2/Fire4" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="StartRegion/Fire2/Fire4" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
 [node name="PoliceCar" parent="StartRegion" instance=ExtResource("2_rnywk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01226, 1.90735e-06, 11.4777)
 
 [node name="PoliceCar2" parent="StartRegion" instance=ExtResource("2_rnywk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27413, 1.90735e-06, 11.4777)
+
+[node name="Police" parent="StartRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.0338, 0, 5.73781)
+
+[node name="Police2" parent="StartRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0338, 0, -8.45233)
+
+[node name="Police3" parent="StartRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19623, 0, -8.45233)
+
+[node name="Police4" parent="StartRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.07067, 0, -0.807464)
+
+[node name="Police5" parent="StartRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.74164, 0, -0.807464)
 
 [node name="EndRegion" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
@@ -251,6 +192,14 @@ isInteractable = false
 
 [node name="Police6" parent="EndRegion" instance=ExtResource("7_7fa1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.42003, 0.0100012, -232.517)
+isInteractable = false
+
+[node name="Police7" parent="EndRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94019, 0.0100012, -216.931)
+isInteractable = false
+
+[node name="Police8" parent="EndRegion" instance=ExtResource("7_7fa1e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61966, 0.0100012, -216.931)
 isInteractable = false
 
 [node name="VFX" type="Node3D" parent="."]
@@ -333,6 +282,45 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.2
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
 
 [node name="FireVFX5" parent="VFX/FireLeft/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
+
+[node name="FireGroup4" type="Node3D" parent="VFX/FireLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29614e-06, 0, 29.1261)
+
+[node name="Fire1" type="Node3D" parent="VFX/FireLeft/FireGroup4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.55736, 0, 0)
+
+[node name="FireVFX" parent="VFX/FireLeft/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
+
+[node name="FireVFX2" parent="VFX/FireLeft/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
+
+[node name="FireVFX3" parent="VFX/FireLeft/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
+
+[node name="FireVFX4" parent="VFX/FireLeft/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
+
+[node name="FireVFX5" parent="VFX/FireLeft/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
+
+[node name="Fire2" type="Node3D" parent="VFX/FireLeft/FireGroup4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.49954, 3.6203, -0.023447)
+
+[node name="FireVFX" parent="VFX/FireLeft/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
+
+[node name="FireVFX2" parent="VFX/FireLeft/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
+
+[node name="FireVFX3" parent="VFX/FireLeft/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
+
+[node name="FireVFX4" parent="VFX/FireLeft/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
+
+[node name="FireVFX5" parent="VFX/FireLeft/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
 [node name="FireGroup3" type="Node3D" parent="VFX/FireLeft"]
@@ -492,85 +480,47 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.2
 [node name="FireVFX5" parent="VFX/FireRight/FireGroup3/Fire2" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
+[node name="FireGroup4" type="Node3D" parent="VFX/FireRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.5398)
+
+[node name="Fire1" type="Node3D" parent="VFX/FireRight/FireGroup4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.55736, 0, 0)
+
+[node name="FireVFX" parent="VFX/FireRight/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
+
+[node name="FireVFX2" parent="VFX/FireRight/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
+
+[node name="FireVFX3" parent="VFX/FireRight/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
+
+[node name="FireVFX4" parent="VFX/FireRight/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
+
+[node name="FireVFX5" parent="VFX/FireRight/FireGroup4/Fire1" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
+
+[node name="Fire2" type="Node3D" parent="VFX/FireRight/FireGroup4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.49954, 3.6203, -0.023447)
+
+[node name="FireVFX" parent="VFX/FireRight/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
+
+[node name="FireVFX2" parent="VFX/FireRight/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
+
+[node name="FireVFX3" parent="VFX/FireRight/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
+
+[node name="FireVFX4" parent="VFX/FireRight/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
+
+[node name="FireVFX5" parent="VFX/FireRight/FireGroup4/Fire2" instance=ExtResource("3_87jr5")]
+transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
+
 [node name="FireLeft2" type="Node3D" parent="VFX"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -227.328)
-
-[node name="FireGroup1" type="Node3D" parent="VFX/FireLeft2"]
-
-[node name="Fire1" type="Node3D" parent="VFX/FireLeft2/FireGroup1"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.55736, 0, 0)
-
-[node name="FireVFX" parent="VFX/FireLeft2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireLeft2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireLeft2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireLeft2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireLeft2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire2" type="Node3D" parent="VFX/FireLeft2/FireGroup1"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.49954, 3.6203, -0.023447)
-
-[node name="FireVFX" parent="VFX/FireLeft2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireLeft2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireLeft2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireLeft2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireLeft2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="FireGroup2" type="Node3D" parent="VFX/FireLeft2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14.2999)
-
-[node name="Fire1" type="Node3D" parent="VFX/FireLeft2/FireGroup2"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.55736, 0, 0)
-
-[node name="FireVFX" parent="VFX/FireLeft2/FireGroup2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireLeft2/FireGroup2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireLeft2/FireGroup2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireLeft2/FireGroup2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireLeft2/FireGroup2/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire2" type="Node3D" parent="VFX/FireLeft2/FireGroup2"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.49954, 3.6203, -0.023447)
-
-[node name="FireVFX" parent="VFX/FireLeft2/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireLeft2/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireLeft2/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireLeft2/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireLeft2/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
 [node name="FireGroup3" type="Node3D" parent="VFX/FireLeft2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.6404)
@@ -614,44 +564,6 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20
 [node name="FireRight2" type="Node3D" parent="VFX"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -227.328)
 
-[node name="FireGroup1" type="Node3D" parent="VFX/FireRight2"]
-
-[node name="Fire1" type="Node3D" parent="VFX/FireRight2/FireGroup1"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.55736, 0, 0)
-
-[node name="FireVFX" parent="VFX/FireRight2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireRight2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireRight2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireRight2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireRight2/FireGroup1/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire2" type="Node3D" parent="VFX/FireRight2/FireGroup1"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.49954, 3.6203, -0.023447)
-
-[node name="FireVFX" parent="VFX/FireRight2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireRight2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireRight2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireRight2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireRight2/FireGroup1/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
 [node name="FireGroup2" type="Node3D" parent="VFX/FireRight2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14.2999)
 
@@ -689,45 +601,6 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.2
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
 
 [node name="FireVFX5" parent="VFX/FireRight2/FireGroup2/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="FireGroup3" type="Node3D" parent="VFX/FireRight2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.6404)
-
-[node name="Fire1" type="Node3D" parent="VFX/FireRight2/FireGroup3"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.55736, 0, 0)
-
-[node name="FireVFX" parent="VFX/FireRight2/FireGroup3/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireRight2/FireGroup3/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireRight2/FireGroup3/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireRight2/FireGroup3/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireRight2/FireGroup3/Fire1" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
-
-[node name="Fire2" type="Node3D" parent="VFX/FireRight2/FireGroup3"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.49954, 3.6203, -0.023447)
-
-[node name="FireVFX" parent="VFX/FireRight2/FireGroup3/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
-
-[node name="FireVFX2" parent="VFX/FireRight2/FireGroup3/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 2.71656, 0, -4.20124)
-
-[node name="FireVFX3" parent="VFX/FireRight2/FireGroup3/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -2.86018, 0, -4.20124)
-
-[node name="FireVFX4" parent="VFX/FireRight2/FireGroup3/Fire2" instance=ExtResource("3_87jr5")]
-transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.20124)
-
-[node name="FireVFX5" parent="VFX/FireRight2/FireGroup3/Fire2" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
 [node name="FireLeft3" type="Node3D" parent="VFX"]

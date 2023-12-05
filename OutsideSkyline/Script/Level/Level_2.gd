@@ -5,6 +5,7 @@ extends Node3D
 @export var helloWorldFollower: Node3D
 @export var targetMark_event5: Node3D
 @export var targetMark_event9: Node3D
+@export var targetMark_toLevel3: Node3D
 
 var eventNum: int = 0
 
@@ -26,6 +27,8 @@ func _ready() -> void:
 	DialogBox.SIGDialogFinish.connect(_eventNumCountUp)
 	targetMark_event5.SIGTargetMarkExpired.connect(_eventNumCountUp)
 	targetMark_event9.SIGTargetMarkExpired.connect(_eventNumCountUp)
+
+	targetMark_toLevel3.SIGTargetMarkExpired.connect(_gotoLevel3)
 
 	_eventList(0)
 
@@ -102,7 +105,7 @@ func _eventList(event_index: int) -> void:
 			if player.isInReality == true:
 				player.canSwitchReality = false
 
-				DialogBox._showDialogBox(DramaScript._TEST_MESSAGE)
+				DialogBox._showDialogBox(DramaScript._2_005)
 
 				_is_event_08_done = false
 				_is_event_09_done = true
@@ -114,7 +117,7 @@ func _eventList(event_index: int) -> void:
 			_is_event_10_done = true
 
 		10: 
-			SystemHQ.changeLevel(LevelReference._FAKE_ENDING)
+			SystemHQ.changeLevel(LevelReference._LEVEL_FAKE_ENDING)
 
 			_is_event_10_done = false
 
@@ -149,6 +152,10 @@ func _eventManager() -> void:
 		
 	if eventNum == 10 and _is_event_10_done:
 		_eventList(10)
+
+
+func _gotoLevel3() -> void:
+	SystemHQ.changeLevel(LevelReference._LEVEL_3)
 
 
 func _eventNumCountUp() -> void:

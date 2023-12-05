@@ -27,11 +27,13 @@ func _eventList(event_index: int) -> void:
 			mrBlue.hide()
 			mrBlue.setAsTarget(false)
 			DialogBox._showDialogBox(DramaScript._0_001)
+			
 			_is_event_01_done = true
 		1:
 			mrBlue.show()
 			mrBlue.setAsTarget(true)
 			_eventNumCountUp()
+			
 			_is_event_01_done = false
 			_is_event_02_done = true
 		2:
@@ -39,11 +41,13 @@ func _eventList(event_index: int) -> void:
 				DialogBox._showDialogBox(DramaScript._0_002)
 				mrBlue.isInteractable = false
 				mrBlue.setAsTarget(false)
+				
 				_is_event_02_done = false
 				_is_event_03_done = true
 		3:
 			mrBlue.queue_free()
 			SystemHQ.changeLevel(LevelReference._LEVEL_1)
+			
 			_is_event_03_done = false
 
 

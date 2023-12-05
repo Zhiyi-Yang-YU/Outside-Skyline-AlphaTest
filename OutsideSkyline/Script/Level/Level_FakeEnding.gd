@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 func _level_fakeEnding_finish() -> void:
-	SystemHQ.quitGame()
+	SystemHQ.changeLevel(LevelReference._LEVEL_2)
 
 
 func _process(delta: float) -> void:
