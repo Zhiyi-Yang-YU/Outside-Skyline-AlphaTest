@@ -1,7 +1,13 @@
-# Outside-Skyline-AlphaTest
+# Outside Skyline
 
-- DATT3300 Outside Skyline Game Milestone 2
-- Deadline: 2023/12/04
+- DATT3300 23W
+- Game Milastone 2
+- Zhiyi Yang (218220061)
+
+## What I have done
+Because in Game Milestone 1, the code implementation of some features is too messy. So at the beginning of Phase 2, I spent a lot of time refactoring and adding new features. I completely refactored my dialogue system, goal guide, and level flow management system, while also modularizing common features for further development and maintenance. At the same time designed the true and false ending. The player can easily follow the level flow to achieve the fake ending, but if you want to discover the hidden level of the true ending, you may need to pay attention to the dialogue with the NPC.
+
+So far, the development on Godot is relatively smooth, but Godot does have difficulties in post-processing due to the lack of resources like Unity store. GDScript's syntactic sugar gives me good positive feedback, and I also like how lightweight it is. But next time I might still choose Unreal or Unity as the representative engine, which has a perfect resource store and a strong community culture.
 
 ## Tutorial Used
 
@@ -14,6 +20,7 @@
 - [【Godot教程】如何实现对话系统](https://www.bilibili.com/video/BV1y64y127n5/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 - [Godot 4 创建3D离屏和屏上目标指示器，用HUD标线跟踪屏幕上和屏幕外的敌人位置！](https://www.bilibili.com/video/BV1Cu4y1a7Us/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 - [GODOT VFX - Stylized Fire Effect Tutorial](https://youtu.be/R3xMwfrlTI8?si=1inAYJ0TDuZJaspE)
+- [Godot 4: Visual Shader Introduction (beginner-friendly tutorial)](https://youtu.be/Gp-mNWY2JJE?si=YvuuWJ-QdoYd6ZQu)
 
 ## Resources Reference
 

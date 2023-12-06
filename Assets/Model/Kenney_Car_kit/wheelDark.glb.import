@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dfsnwkhlmq1so"
-path="res://.godot/imported/wheelDark.glb-25206d4eaca5c33f4bbc49f9db7f4ee6.scn"
+path="res://.godot/imported/wheelDark.glb-9947234e8a3b4e94a222da8fdf969f71.scn"
 
 [deps]
 
-source_file="res://Assets/Model/Kenney_Car_Kit/wheelDark.glb"
-dest_files=["res://.godot/imported/wheelDark.glb-25206d4eaca5c33f4bbc49f9db7f4ee6.scn"]
+source_file="res://Assets/Model/Kenney_Car_kit/wheelDark.glb"
+dest_files=["res://.godot/imported/wheelDark.glb-9947234e8a3b4e94a222da8fdf969f71.scn"]
 
 [params]
 

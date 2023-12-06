@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b1ofk3a27kx86"
-path="res://.godot/imported/taxi.glb-91a80f27011ace32fc9659a40ebab68f.scn"
+path="res://.godot/imported/taxi.glb-67578477db01ab6e7c0dcba9ad07bb98.scn"
 
 [deps]
 
-source_file="res://Assets/Model/Kenney_Car_Kit/taxi.glb"
-dest_files=["res://.godot/imported/taxi.glb-91a80f27011ace32fc9659a40ebab68f.scn"]
+source_file="res://Assets/Model/Kenney_Car_kit/taxi.glb"
+dest_files=["res://.godot/imported/taxi.glb-67578477db01ab6e7c0dcba9ad07bb98.scn"]
 
 [params]
 
