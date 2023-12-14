@@ -3,7 +3,6 @@ extends Control
 
 func _ready() -> void:
 	DialogBox._showDialogBox(DramaScript._REAL_ENDING)
-	# 连接对话框结束信号
 	DialogBox.SIGDialogFinish.connect(_level_realEnding_finish)
 
 

@@ -130,7 +130,7 @@ const _1_001: Array = [
 	{
 		speaker = "Raingo's Friend: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Make a wish!"
+		text = "Let's make a wish!"
 	},
 	{
 		speaker = "",
@@ -138,19 +138,19 @@ const _1_001: Array = [
 		text = ""
 	},
 	{
-		speaker = "Raingo: ",
+		speaker = "",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "What is your wish?"
+		text = "."
 	},
 	{
-		speaker = "Raingo's Friend: ",
+		speaker = "",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "It doesn't work when you talk about it"
-	},	
+		text = ".."
+	},
 	{
-		speaker = "Raingo: ",
+		speaker = "",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "Oh, yeah, I... know...?"
+		text = "..."
 	},
 	{
 		speaker = "Raingo: ",
