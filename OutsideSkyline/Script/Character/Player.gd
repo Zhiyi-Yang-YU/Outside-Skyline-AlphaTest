@@ -7,12 +7,12 @@ var isInReality: bool = true
 #物理
 var currentSpeed: float
 var isCrouching: bool = false
-const WALK_SPEED: float = 4.5
-const SPRINT_SPEED: float = 6.0
-const CROUCH_SPEED: float = 1.0
+const WALK_SPEED: float = 4.0
+const SPRINT_SPEED: float = 5.0
+const CROUCH_SPEED: float = 0.5
 
 const GRAVITATIONAL_ACCELERATION: float = 9.80665
-const REGULAR_JUMP_VELOCITY: float = 4.5
+const REGULAR_JUMP_VELOCITY: float = 3.5
 const CROUCHING_DEPTH_LOCAL: float = -0.7
 
 #摄像机
@@ -21,7 +21,7 @@ const CAMERA_ROTATE_X_LIMIT_MIN: float = -45.0
 const CAMERA_ROTATE_X_LIMIT_MAX: float = 60.0
 
 #FOV
-const FOV_BASE: float = 80.0
+const FOV_BASE: float = 60.0
 const FOV_TARGET_SCLAE: float = 1.3
 const FOV_VELOCITY_CLAMP_LIMIT_MIN: float = 0.5
 const FOV_VELOCITY_CLAMP_LIMIT_MAX: float = SPRINT_SPEED * 2
@@ -30,8 +30,8 @@ const FOV_VELOCITY_CLAMP_LIMIT_MAX: float = SPRINT_SPEED * 2
 var headBobTime: float = 0.0
 var currentCrouchingDepth: float = 0.0
 const HEAD_HEIGHT: float = 1.8
-const HEAD_BOB_FREQUENCY: float = 2.0
-const HEAD_BOB_AMPLITUDE: float = 0.05
+const HEAD_BOB_FREQUENCY: float = 3.0
+const HEAD_BOB_AMPLITUDE: float = 0.03
 
 #lerp scale
 const AIR_STOP_LERP_DELTA_SCALE: float = 3.0
@@ -42,8 +42,12 @@ const CROUCH_LERP_DELTA_SCALE: float = 10.0
 @onready var player: Node3D = $VisualNode
 @onready var head: Node3D = $VisualNode/Head
 @onready var camera: Camera3D = $VisualNode/Head/Camera3D
+
 @onready var standCollissionShape: CollisionShape3D = $Stand_CollisionShape3D
 @onready var crouchCollissionShape: CollisionShape3D = $Crouch_CollisionShape3D
+
+@onready var walkingAudio: AudioStreamPlayer3D = $AudioNode/WalkingAudio
+@onready var walkingAudioInterval: Timer = $AudioNode/WalkingAudioInterval
 
 
 func _ready() -> void:
@@ -111,6 +115,13 @@ func move(dt: float) -> void:
 		if direction:
 			velocity.x = direction.x * currentSpeed
 			velocity.z = direction.z * currentSpeed
+
+			# if not walkingAudio.playing:
+			# 	walkingAudio.play()
+
+			if walkingAudioInterval.time_left == 0 and not walkingAudio.playing:
+				walkingAudio.play()
+				walkingAudioInterval.start()
 		else:
 			velocity.x = lerp(
 				velocity.x, direction.x * currentSpeed, FLOOR_STOP_LERP_DELTA_SCALE * dt
@@ -118,9 +129,15 @@ func move(dt: float) -> void:
 			velocity.z = lerp(
 				velocity.z, direction.z * currentSpeed, FLOOR_STOP_LERP_DELTA_SCALE * dt
 			)
+
+			if walkingAudio.playing:
+				walkingAudio.stop()
 	else:
 		velocity.x = lerp(velocity.x, direction.x * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
 		velocity.z = lerp(velocity.z, direction.z * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
+
+		if walkingAudio.playing:
+			walkingAudio.stop()
 
 
 func headBob(dt: float) -> void:
