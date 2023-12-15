@@ -54,6 +54,7 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * CAMERA_ROTATE_SENSITIVITY)
@@ -115,16 +116,6 @@ func move(dt: float) -> void:
 		if direction:
 			velocity.x = direction.x * currentSpeed
 			velocity.z = direction.z * currentSpeed
-
-			# if not walkingAudio.playing:
-			# 	walkingAudio.play()
-
-			if walkingAudioInterval.time_left == 0 and not walkingAudio.playing:
-				walkingAudio.play()
-				walkingAudioInterval.start()
-			# if walkingAudioInterval.time_left == 0:
-			# 	walkingAudio.play()
-			# 	walkingAudioInterval.start()
 		else:
 			velocity.x = lerp(
 				velocity.x, direction.x * currentSpeed, FLOOR_STOP_LERP_DELTA_SCALE * dt
@@ -187,3 +178,9 @@ func switchRealityANDMemory() -> void:
 				)
 
 			isInReality = not isInReality
+
+
+func _on_walking_audio_interval_timeout() -> void:
+	if is_on_floor() and Input.get_vector("ui_moveLeft", "ui_moveRight", "ui_moveForward", "ui_moveBackward").length() != 0:
+		walkingAudio.play()
+	walkingAudioInterval.start()

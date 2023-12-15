@@ -44,3 +44,6 @@ disabled = true
 stream = ExtResource("2_6py0n")
 
 [node name="WalkingAudioInterval" type="Timer" parent="AudioNode"]
+wait_time = 0.5
+
+[connection signal="timeout" from="AudioNode/WalkingAudioInterval" to="." method="_on_walking_audio_interval_timeout"]
