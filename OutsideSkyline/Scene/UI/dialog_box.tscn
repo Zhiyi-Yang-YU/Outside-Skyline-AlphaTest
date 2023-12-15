@@ -54,5 +54,6 @@ wait_time = 2.0
 
 [node name="DialogSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_g6dcc")
+volume_db = -7.0
 
 [connection signal="timeout" from="DialogTimer" to="." method="_on_dialog_timer_timeout"]

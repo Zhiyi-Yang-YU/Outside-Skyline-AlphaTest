@@ -122,6 +122,9 @@ func move(dt: float) -> void:
 			if walkingAudioInterval.time_left == 0 and not walkingAudio.playing:
 				walkingAudio.play()
 				walkingAudioInterval.start()
+			# if walkingAudioInterval.time_left == 0:
+			# 	walkingAudio.play()
+			# 	walkingAudioInterval.start()
 		else:
 			velocity.x = lerp(
 				velocity.x, direction.x * currentSpeed, FLOOR_STOP_LERP_DELTA_SCALE * dt
@@ -132,7 +135,7 @@ func move(dt: float) -> void:
 
 			if walkingAudio.playing:
 				walkingAudio.stop()
-				walkingAudioInterval.stop()
+			walkingAudioInterval.stop()
 	else:
 		velocity.x = lerp(velocity.x, direction.x * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
 		velocity.z = lerp(velocity.z, direction.z * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
