@@ -1,0 +1,6 @@
+[gd_resource type="PanoramaSkyMaterial" load_steps=2 format=3 uid="uid://bohq3btm15b8n"]
+
+[ext_resource type="Texture2D" uid="uid://4d3b6v21rdiw" path="res://Assets/Texture/BackGroundMaterial/bg_mat_memory.jpg" id="1_2f6pd"]
+
+[resource]
+panorama = ExtResource("1_2f6pd")

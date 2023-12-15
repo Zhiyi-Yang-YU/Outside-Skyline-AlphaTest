@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://Assets/Font/JetBrainsMono-Bold.ttf" id="4_p1u8v"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://Assets/Font/JetBrainsMono-Medium.ttf" id="5_wb67f"]
 [ext_resource type="PackedScene" uid="uid://dg65ghdam80a0" path="res://OutsideSkyline/Scene/Level/Level_2_Memory.tscn" id="6_8bw7k"]
+[ext_resource type="Material" uid="uid://dup2ujwyvtwvo" path="res://Assets/Material/RealityEnvironment.tres" id="7_txblw"]
 [ext_resource type="PackedScene" uid="uid://dnclc8ynt3oi1" path="res://OutsideSkyline/Scene/Level/Level_2_Reality.tscn" id="7_vvjfk"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="8_bu0uo"]
 [ext_resource type="PackedScene" uid="uid://y4yp1mnu8484" path="res://OutsideSkyline/Scene/Character/HelloWorldReligion.tscn" id="9_amnd0"]
@@ -24,12 +25,8 @@ font_size = 42
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jnkxl"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
 [sub_resource type="Sky" id="Sky_w8o80"]
-sky_material = SubResource("ProceduralSkyMaterial_jnkxl")
+sky_material = ExtResource("7_txblw")
 
 [sub_resource type="Environment" id="Environment_qpju7"]
 background_mode = 2

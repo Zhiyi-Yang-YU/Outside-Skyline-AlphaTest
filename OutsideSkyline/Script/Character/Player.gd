@@ -46,13 +46,13 @@ const CROUCH_LERP_DELTA_SCALE: float = 10.0
 @onready var standCollissionShape: CollisionShape3D = $Stand_CollisionShape3D
 @onready var crouchCollissionShape: CollisionShape3D = $Crouch_CollisionShape3D
 
-@onready var walkingAudio: AudioStreamPlayer3D = $AudioNode/WalkingAudio
-@onready var walkingAudioInterval: Timer = $AudioNode/WalkingAudioInterval
+# @onready var walkingAudio: AudioStreamPlayer3D = $AudioNode/WalkingAudio
+# @onready var walkingAudioInterval: Timer = $AudioNode/WalkingAudioInterval
 
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	walkingAudioInterval.start()
+	# walkingAudioInterval.start()
 
 
 
@@ -125,16 +125,16 @@ func move(dt: float) -> void:
 				velocity.z, direction.z * currentSpeed, FLOOR_STOP_LERP_DELTA_SCALE * dt
 			)
 
-			if walkingAudio.playing:
-				walkingAudio.stop()
-			walkingAudioInterval.stop()
+			# if walkingAudio.playing:
+			# 	walkingAudio.stop()
+			# walkingAudioInterval.stop()
 	else:
 		velocity.x = lerp(velocity.x, direction.x * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
 		velocity.z = lerp(velocity.z, direction.z * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
 
-		if walkingAudio.playing:
-			walkingAudio.stop()
-		walkingAudioInterval.stop()
+		# if walkingAudio.playing:
+		# 	walkingAudio.stop()
+		# walkingAudioInterval.stop()
 
 
 func headBob(dt: float) -> void:
@@ -183,7 +183,7 @@ func switchRealityANDMemory() -> void:
 
 func _on_walking_audio_interval_timeout() -> void:
 	print("timer out")
-	if is_on_floor():
-		if not Input.get_vector("ui_moveLeft", "ui_moveRight", "ui_moveForward", "ui_moveBackward").length() == 0:
-			walkingAudio.play()
-	walkingAudioInterval.start()
+	# if is_on_floor():
+	# 	if not Input.get_vector("ui_moveLeft", "ui_moveRight", "ui_moveForward", "ui_moveBackward").length() == 0:
+	# 		walkingAudio.play()
+	# walkingAudioInterval.start()
