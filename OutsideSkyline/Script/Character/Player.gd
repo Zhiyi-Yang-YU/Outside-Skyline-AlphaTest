@@ -52,6 +52,7 @@ const CROUCH_LERP_DELTA_SCALE: float = 10.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	walkingAudioInterval.start()
 
 
 
@@ -181,6 +182,8 @@ func switchRealityANDMemory() -> void:
 
 
 func _on_walking_audio_interval_timeout() -> void:
-	if is_on_floor() and Input.get_vector("ui_moveLeft", "ui_moveRight", "ui_moveForward", "ui_moveBackward").length() != 0:
-		walkingAudio.play()
+	print("timer out")
+	if is_on_floor():
+		if not Input.get_vector("ui_moveLeft", "ui_moveRight", "ui_moveForward", "ui_moveBackward").length() == 0:
+			walkingAudio.play()
 	walkingAudioInterval.start()
