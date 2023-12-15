@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dq84fvkbrfrj3" path="res://Assets/Font/JetBrainsMono-Bold.ttf" id="5_ja0jm"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://Assets/Font/JetBrainsMono-Medium.ttf" id="6_u0qiu"]
 [ext_resource type="Material" uid="uid://dup2ujwyvtwvo" path="res://Assets/Material/RealityEnvironment.tres" id="7_0vpyy"]
-[ext_resource type="Material" uid="uid://co51fgt1ieiwm" path="res://Assets/Shader/CloakedMaterial.tres" id="7_2uln0"]
+[ext_resource type="Material" uid="uid://coc8xm51g8gq1" path="res://Assets/Material/Texture_Black.tres" id="7_popqy"]
 [ext_resource type="PackedScene" uid="uid://5xpfbueermk5" path="res://OutsideSkyline/Scene/Character/addMore.tscn" id="8_pceih"]
 [ext_resource type="Script" path="res://OutsideSkyline/Script/GameplayUI/GameManager.gd" id="9_vokoo"]
 [ext_resource type="PackedScene" uid="uid://c0s8kdotmhivi" path="res://OutsideSkyline/Scene/Character/Player.tscn" id="10_0s2e6"]
@@ -223,46 +223,45 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 [node name="Floor" type="CSGBox3D" parent="GameLevel/RealityLevel/VisualNode/Structure"]
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.504, 0)
-material_override = ExtResource("7_2uln0")
+material_override = ExtResource("7_popqy")
 use_collision = true
 size = Vector3(50, 1, 28.298)
 
 [node name="Top" type="CSGBox3D" parent="GameLevel/RealityLevel/VisualNode/Structure"]
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
-visible = false
-material_override = ExtResource("7_2uln0")
+material_override = ExtResource("7_popqy")
 use_collision = true
 size = Vector3(50, 1, 28.298)
 
 [node name="Wall_-Z" type="CSGBox3D" parent="GameLevel/RealityLevel/VisualNode/Structure"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0.8, 0)
-material_override = ExtResource("7_2uln0")
+material_override = ExtResource("7_popqy")
 use_collision = true
 size = Vector3(1, 3.8, 30)
 
 [node name="Wall_+Z" type="CSGBox3D" parent="GameLevel/RealityLevel/VisualNode/Structure"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5, 0.8, 0)
-material_override = ExtResource("7_2uln0")
+material_override = ExtResource("7_popqy")
 use_collision = true
 size = Vector3(1, 3.8, 30)
 
 [node name="Wall_+X" type="CSGBox3D" parent="GameLevel/RealityLevel/VisualNode/Structure"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 14.1345)
-material_override = ExtResource("7_2uln0")
+material_override = ExtResource("7_popqy")
 use_collision = true
 size = Vector3(50, 3.8, 1)
 
 [node name="Wall_-X" type="CSGBox3D" parent="GameLevel/RealityLevel/VisualNode/Structure"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -14.4905)
-material_override = ExtResource("7_2uln0")
+material_override = ExtResource("7_popqy")
 use_collision = true
-size = Vector3(50, 3.8, 1)
+size = Vector3(52, 3.8, 1)
 
 [node name="LevelDesign" type="Node3D" parent="GameLevel/RealityLevel/VisualNode"]
 
 [node name="TurnOff" parent="GameLevel/RealityLevel/VisualNode" instance=ExtResource("8_pceih")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -5.68434e-14)
 isInteractable = true
 npcName = "Turn off Game Save File"
 

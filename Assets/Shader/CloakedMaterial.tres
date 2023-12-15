@@ -5,3 +5,6 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_pt3nj")
+shader_parameter/rimSharpness = 3.0
+shader_parameter/emissionColor = Color(0, 0, 0.690196, 1)
+shader_parameter/emissionAmount = 5.0
