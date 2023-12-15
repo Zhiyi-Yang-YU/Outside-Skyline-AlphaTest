@@ -132,12 +132,14 @@ func move(dt: float) -> void:
 
 			if walkingAudio.playing:
 				walkingAudio.stop()
+				walkingAudioInterval.stop()
 	else:
 		velocity.x = lerp(velocity.x, direction.x * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
 		velocity.z = lerp(velocity.z, direction.z * currentSpeed, AIR_STOP_LERP_DELTA_SCALE * dt)
 
 		if walkingAudio.playing:
 			walkingAudio.stop()
+		walkingAudioInterval.stop()
 
 
 func headBob(dt: float) -> void:
