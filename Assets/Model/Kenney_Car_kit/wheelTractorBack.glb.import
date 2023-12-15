@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c56r7g0o1umpt"
-path="res://.godot/imported/wheelTractorBack.glb-19a802cc8e7cb599c4b045aa50d317ce.scn"
+path="res://.godot/imported/wheelTractorBack.glb-f12a88a96df94bde8b02cf40c07d9c17.scn"
 
 [deps]
 
-source_file="res://Assets/Model/Kenney_Car_kit/wheelTractorBack.glb"
-dest_files=["res://.godot/imported/wheelTractorBack.glb-19a802cc8e7cb599c4b045aa50d317ce.scn"]
+source_file="res://Assets/Model/Kenney_Car_Kit/wheelTractorBack.glb"
+dest_files=["res://.godot/imported/wheelTractorBack.glb-f12a88a96df94bde8b02cf40c07d9c17.scn"]
 
 [params]
 

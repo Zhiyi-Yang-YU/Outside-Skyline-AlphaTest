@@ -1,10 +1,22 @@
 # Outside Skyline
 
 - DATT3300 23W
-- Game Milastone 2
+- Final Result
 - Zhiyi Yang (218220061)
 
+## TODO
+
+- 走路音效
+- 说话音效
+- 环境贴图
+- 第三关迷宫设计
+- 台词重新设计
+
+# DONE
+
+
 ## What I have done
+
 Because in Game Milestone 1, the code implementation of some features is too messy. So at the beginning of Phase 2, I spent a lot of time refactoring and adding new features. I completely refactored my dialogue system, goal guide, and level flow management system, while also modularizing common features for further development and maintenance. At the same time designed the true and false ending. The player can easily follow the level flow to achieve the fake ending, but if you want to discover the hidden level of the true ending, you may need to pay attention to the dialogue with the NPC.
 
 So far, the development on Godot is relatively smooth, but Godot does have difficulties in post-processing due to the lack of resources like Unity store. GDScript's syntactic sugar gives me good positive feedback, and I also like how lightweight it is. But next time I might still choose Unreal or Unity as the representative engine, which has a perfect resource store and a strong community culture.
@@ -42,5 +54,6 @@ So far, the development on Godot is relatively smooth, but Godot does have diffi
   
 ## Creative Idea Reference
 
+- [xQc Roasted by TTS Donos for 20 minutes straight while building Roundabout City in Cities: Skylines](https://youtu.be/dPCw4p3SA0s?si=JaK0nBzHTEPlWWRM)
 - [【基德】困扰人类2万年的难题：全息宇宙理论](https://www.bilibili.com/video/BV1RL411M7ZS/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
 - [Maldacena, J. The Large-N Limit of Superconformal Field Theories and Supergravity. International Journal of Theoretical Physics 38, 1113–1133 (1999).](https://doi.org/10.1023/A:1026654312961)

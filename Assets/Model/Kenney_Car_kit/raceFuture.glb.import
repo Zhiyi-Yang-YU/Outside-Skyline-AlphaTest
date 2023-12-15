@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ivruv5rc3alx"
-path="res://.godot/imported/raceFuture.glb-89758b1eafa4b5ae251b846b26328d2d.scn"
+path="res://.godot/imported/raceFuture.glb-2ccd5a18b37c49448259f3439f6df1b8.scn"
 
 [deps]
 
-source_file="res://Assets/Model/Kenney_Car_kit/raceFuture.glb"
-dest_files=["res://.godot/imported/raceFuture.glb-89758b1eafa4b5ae251b846b26328d2d.scn"]
+source_file="res://Assets/Model/Kenney_Car_Kit/raceFuture.glb"
+dest_files=["res://.godot/imported/raceFuture.glb-2ccd5a18b37c49448259f3439f6df1b8.scn"]
 
 [params]
 
