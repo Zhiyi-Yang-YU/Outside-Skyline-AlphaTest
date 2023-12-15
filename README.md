@@ -7,13 +7,13 @@
 ## TODO
 
 - 走路音效
-- 说话音效
 - 环境贴图
 - 第三关迷宫设计
 - 台词重新设计
 
-# DONE
+## DONE
 
+- 说话音效
 
 ## What I have done
 
@@ -51,6 +51,7 @@ So far, the development on Godot is relatively smooth, but Godot does have diffi
   - [通用警笛音效-终极合集-视频编辑制作-Police Siren - Ultimate Collections _ Sound effects](https://www.bilibili.com/video/BV1KW41137KX/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
   - [【绿幕素材】直升机旋转视频素材，带音效，无水印](https://www.bilibili.com/video/BV1xL4y1N7Zs/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
   - [燃烧 #01 着火 火焰 环境音 音效 (HQ)](https://www.bilibili.com/video/BV1jL4y1P7uB/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
+  - [全站首发歪比巴卜绿幕素材](https://www.bilibili.com/video/BV1SC4y1W7Yq/?share_source=copy_web&vd_source=92a265b25fedcfe73041d8730946e68d)
   
 ## Creative Idea Reference
 

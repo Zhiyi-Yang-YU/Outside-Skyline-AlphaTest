@@ -13,7 +13,10 @@ const SYSTEM: String = COLOR_GREEN
 @onready var dialogContent: HBoxContainer = $DialogContent
 @onready var speaker: Label = $DialogContent/Speaker
 @onready var content: Label = $DialogContent/Content
+
 @onready var dialogTimer: Timer = $DialogTimer
+
+@onready var dialogSound: AudioStreamPlayer = $DialogSound
 
 var dialogsArray: Array = []
 var curr: int = 0
@@ -40,9 +43,14 @@ func _showDialogBox(_dialogsArray: Array) -> void:
 
 func _showDialog(index: int) -> void:
 	curr = index
+
 	speaker.text = dialogsArray[curr].speaker
 	_speakerColorSetUp(dialogsArray[curr].speakerCamp)
 	content.text = dialogsArray[curr].text
+
+	# 播放对话声音
+	if dialogSound and not dialogSound.playing:
+		dialogSound.play()
 
 
 # Helpers

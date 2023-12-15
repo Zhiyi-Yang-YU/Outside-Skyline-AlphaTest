@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcgkqubno5qmk"]
+[gd_scene load_steps=6 format=3 uid="uid://dcgkqubno5qmk"]
 
 [ext_resource type="Script" path="res://OutsideSkyline/Script/Dialog/DialogBox.gd" id="1_wx68y"]
 [ext_resource type="FontFile" uid="uid://4hxhewmwpgm8" path="res://Assets/Font/JetBrainsMono-Medium.ttf" id="2_xiuwo"]
+[ext_resource type="AudioStream" uid="uid://cfff4c85fy40r" path="res://Assets/Sound/DialogSound.mp3" id="3_g6dcc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0ehcn"]
 font = ExtResource("2_xiuwo")
@@ -50,5 +51,8 @@ vertical_alignment = 1
 
 [node name="DialogTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="DialogSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g6dcc")
 
 [connection signal="timeout" from="DialogTimer" to="." method="_on_dialog_timer_timeout"]

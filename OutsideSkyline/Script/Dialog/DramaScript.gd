@@ -135,11 +135,6 @@ const _1_001: Array = [
 	{
 		speaker = "",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = ""
-	},
-	{
-		speaker = "",
-		speakerCamp = DialogBox.FRIENDLY,
 		text = "."
 	},
 	{
@@ -384,7 +379,7 @@ const _2_003: Array = [
 	{
 		speaker = "HW Follower: ",
 		speakerCamp = DialogBox.NEUTRAL,
-		text = "May relativity and quantum mechanics bless you"
+		text = "May quantum mechanics bless you"
 	},
 	{
 		speaker = "HW Follower: ",
@@ -511,27 +506,25 @@ const _FAKE_ENDING: Array = [
 		speakerCamp = DialogBox.SYSTEM,
 		text = "Do you really think so?"
 	},
-	# 记得删
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "You sure you don't want to know..."
+		text = "Well"
 	},
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "...what is behind the wall?(this line will be delete in final)"
-	},
-	# 记得删
-	{
-		speaker = "System: ",
-		speakerCamp = DialogBox.SYSTEM,
-		text = "Always remember the name of game:"
+		text = "At least you can leave this hell"
 	},
 	{
 		speaker = "System: ",
 		speakerCamp = DialogBox.SYSTEM,
-		text = "OUTSIDE SKYLINE"
+		text = "Lucky you"
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Try to find the real ending..."
 	},
 	{
 		speaker = "System: ",
