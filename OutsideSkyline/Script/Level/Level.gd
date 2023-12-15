@@ -5,10 +5,17 @@ extends Node3D
 @export var realityScene: Node3D
 @export var memoryScene: Node3D
 
+# var sky_reality: PanoramaSkyMaterial
+# var sky_memory: PanoramaSkyMaterial
 
 func _ready() -> void:
-	realityScene.visible = true
-	memoryScene.visible = false
+	realityScene.show()
+	memoryScene.hide()
+
+	# sky_reality = preload("res://Assets/Material/RealityEnvironment.tres") as PanoramaSkyMaterial
+	# sky_memory = preload("res://Assets/Material/MemoryEnvironment.tres") as PanoramaSkyMaterial
+
+	# _setSky(sky_reality)
 
 
 func _process(delta: float) -> void:
