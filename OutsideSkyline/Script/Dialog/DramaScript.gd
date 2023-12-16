@@ -344,6 +344,16 @@ const _2_002: Array = [
 		text = "Platform Nine and Three-Quarters, you know, haha"
 	},
 	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Causing a bug, crashing a game"
+	},
+	{
+		speaker = "Friend: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "May be you can even run away from the world by causing a bug, hahaha"
+	},
+	{
 		speaker = "Raingo: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Don't laugh at me..."
@@ -470,6 +480,21 @@ const _3_001: Array = [
 		speakerCamp = DialogBox.SYSTEM,
 		text = "Turn off to escape from the game"
 	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Wait... What???"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "I just think something strange will happen"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "and you tell me everything is real???"
+	},
 ]
 
 const _3_002: Array = [
@@ -486,7 +511,12 @@ const _3_002: Array = [
 	{
 		speaker = "Raingo: ",
 		speakerCamp = DialogBox.FRIENDLY,
-		text = "I am tired of this, Let me go"
+		text = "I am tired of this disaster, Let me go"
+	},
+	{
+		speaker = "Raingo: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "Some play will just create a new game save file anyway..."
 	},
 	{
 		speaker = "System: ",
@@ -525,6 +555,11 @@ const _FAKE_ENDING: Array = [
 		speaker = "Developer: ",
 		speakerCamp = DialogBox.FRIENDLY,
 		text = "Try to find the real ending..."
+	},
+	{
+		speaker = "Developer: ",
+		speakerCamp = DialogBox.FRIENDLY,
+		text = "The answer is just in any dialog"
 	},
 	{
 		speaker = "System: ",

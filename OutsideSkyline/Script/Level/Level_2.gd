@@ -155,7 +155,7 @@ func _eventManager() -> void:
 
 
 func _gotoLevel3() -> void:
-	SystemHQ.changeLevel(LevelReference._LEVEL_3)
+	SystemHQ.changeLevel(LevelReference._LEVEL_3_1)
 
 
 func _eventNumCountUp() -> void:

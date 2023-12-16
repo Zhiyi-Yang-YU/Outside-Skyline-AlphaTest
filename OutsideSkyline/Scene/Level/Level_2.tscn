@@ -30,7 +30,9 @@ sky_material = ExtResource("7_txblw")
 
 [sub_resource type="Environment" id="Environment_qpju7"]
 background_mode = 2
+background_energy_multiplier = 0.5
 sky = SubResource("Sky_w8o80")
+sky_rotation = Vector3(0.261799, 0, 0)
 tonemap_mode = 2
 glow_enabled = true
 

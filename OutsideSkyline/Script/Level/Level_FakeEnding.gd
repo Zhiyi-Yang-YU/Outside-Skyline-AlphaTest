@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 func _level_fakeEnding_finish() -> void:
-	SystemHQ.changeLevel(LevelReference._LEVEL_2)
+	SystemHQ.changeLevel(LevelReference._LEVEL_1)
 
 
 func _process(delta: float) -> void:

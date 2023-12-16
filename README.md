@@ -1,19 +1,12 @@
 # Outside Skyline
 
 - DATT3300 23W
-- Final Result
-- Zhiyi Yang (218220061)
+- Zhiyi Yang
 
-## TODO
+## Description
 
-- 第三关迷宫设计
-- 台词重新设计
-
-## What I have done
-
-Because in Game Milestone 1, the code implementation of some features is too messy. So at the beginning of Phase 2, I spent a lot of time refactoring and adding new features. I completely refactored my dialogue system, goal guide, and level flow management system, while also modularizing common features for further development and maintenance. At the same time designed the true and false ending. The player can easily follow the level flow to achieve the fake ending, but if you want to discover the hidden level of the true ending, you may need to pay attention to the dialogue with the NPC.
-
-So far, the development on Godot is relatively smooth, but Godot does have difficulties in post-processing due to the lack of resources like Unity store. GDScript's syntactic sugar gives me good positive feedback, and I also like how lightweight it is. But next time I might still choose Unreal or Unity as the representative engine, which has a perfect resource store and a strong community culture.
+Outside Skyline, inside "pipeline".
+Are you really playing a game?
 
 ## Tutorial Used
 
@@ -36,6 +29,7 @@ So far, the development on Godot is relatively smooth, but Godot does have diffi
   - [Fire Texture](https://www.patreon.com/posts/godot-vfx-fire-90253805)
   - [material_wall](https://polyhaven.com/a/brick_wall_006)
   - [Aerial Grass Rock](https://polyhaven.com/a/aerial_grass_rock)
+  - [Skybox](skybox.blockadelabs.com)
 - Models
   - [Car Kit](https://www.kenney.nl/assets/car-kit)
   - [City Kit (Suburban)](https://www.kenney.nl/assets/city-kit-suburban)

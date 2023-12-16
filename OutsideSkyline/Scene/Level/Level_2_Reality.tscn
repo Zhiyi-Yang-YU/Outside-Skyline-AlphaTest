@@ -45,6 +45,7 @@ size = Vector3(8, 3.8, 2.5)
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Fire1" type="Node3D" parent="StartRegion/Fire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.6664)
 
 [node name="FireVFX" parent="StartRegion/Fire/Fire1" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
@@ -62,7 +63,7 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.2
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
 [node name="Fire2" type="Node3D" parent="StartRegion/Fire"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.49306, 0, 0)
 
 [node name="FireVFX" parent="StartRegion/Fire/Fire2" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
@@ -80,7 +81,7 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.2
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
 [node name="Fire3" type="Node3D" parent="StartRegion/Fire"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.35869)
 
 [node name="FireVFX" parent="StartRegion/Fire/Fire3" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
@@ -98,7 +99,7 @@ transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, -1.11273, 0, -4.2
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 1.96847, 0, -4.20124)
 
 [node name="Fire4" type="Node3D" parent="StartRegion/Fire"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.40071, 0, 0)
 
 [node name="FireVFX" parent="StartRegion/Fire/Fire4" instance=ExtResource("3_87jr5")]
 transform = Transform3D(17.4086, 0, 0, 0, 1.66952, 0, 0, 0, 1, 0, 0, -4.20124)
